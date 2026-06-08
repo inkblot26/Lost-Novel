@@ -28,10 +28,35 @@
             margin-top: 50px;
             text-align: center;
         }
+
+        /* ===== DARK MODE ===== */
+        body.dark {
+            background-color: #0f0f0f;
+            color: #e6e6e6;
+        }
+        
+        /* links */
+        body.dark a {
+            color: #9ecbff;
+        }
+        
+        /* navigation */
+        body.dark .nav a {
+            color: #9ecbff;
+        }
+        
+        /* optional: soften text contrast */
+        body.dark h1 {
+            color: #ffffff;
+        }
+        
     </style>
 </head>
 <body>
 
+<!-- Dark/Light Toggle Button -->
+<button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>    
+    
 <h1>Chapter 2: Rare Echo</h1>
 
 <div class="chapter">
@@ -105,14 +130,55 @@ Gideon ruffled his little brother’s hair. “That’s the spirit. You bring th
 
 </div>
 
-<div class="navigation">
-    <a href="/Lost-Novel/index.html">← Back to Home</a>
+<div class="nav">
+    <a id="prevBtn" href="#">← Previous</a>
+    <a href="/Lost-Novel/">Home</a>
+    <a id="nextBtn" href="#">Next →</a>
 </div>
+
+<script>
+    // DEFINE YOUR CHAPTER PATHS HERE
+    const prevChapter = null; 
+    const nextChapter = "/Lost-Novel/book1/ch002.html";
+    // SET BUTTONS
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    // Previous
+    if (prevChapter) {
+        prevBtn.href = prevChapter;
+    } else {
+        prevBtn.style.display = "none";
+    }
+    // Next
+    if (nextChapter) {
+        nextBtn.href = nextChapter;
+    } else {
+        nextBtn.style.display = "none";
+    }
+</script>   
+
+<script>
+    // LOAD saved reading mode when page opens
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark");
+    }
+    
+    // toggle function
+    function toggleMode() {
+        document.body.classList.toggle("dark");
+    
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    }
+</script>    
 
 <script>
     //store current chapter
     localStorage.setItem("lastChapter", window.location.href);
-</script>    
+</script>
 
 </body>
 </html>
