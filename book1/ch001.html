@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chapter 1: Town of Tala</title>
+    <title>Lost - Chapter 1</title>
+
+    <style>
+        body {
+            max-width: 700px;
+            margin: auto;
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .chapter {
+            white-space: pre-wrap; /* keeps line breaks */
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Chapter 1: Town of Tala</h1>
+    <h1>Chapter 1</h1>
 
-    <p>
-        The sun crept slowly over the hills, spilling soft gold across the valley of Lanthea. Its light touched the quiet town of Tala, where wooden roofs glistened faintly with morning dew. Thin smoke curled lazily from chimneys, carrying the warm smell of grain porridge and fresh bread. Children darted barefoot along dirt paths, laughter echoing between small houses.
+    The sun crept slowly over the hills, spilling soft gold across the valley of Lanthea. Its light touched the quiet town of Tala, where wooden roofs glistened faintly with morning dew. Thin smoke curled lazily from chimneys, carrying the warm smell of grain porridge and fresh bread. Children darted barefoot along dirt paths, laughter echoing between small houses.
 Out in the fields, farmers were already at work. They knelt in rows, watering the crops, checking the soil with calloused hands. Their movements were steady, unhurried, the rhythm of lives untroubled.
 Tala was simple. Peaceful. Removed from the scars of the old world.
 At least, for now.
@@ -80,13 +111,40 @@ A tome—ancient and worn. Its cover was cracked, wrapped in brittle blue petals
 Eyes wide, small hands trembling, he opened it.
 A faint glow seeped into his skin. Words carved themselves into his mind.
 +Echo of FATE
+Type: Rare 
 Description:
 An invisible thread of destiny coils around you, binding your path to luck — both fortune and misfortune. From the moment of bonding, luck twists in unpredictable ways: at times a blessing, at times a curse… and always beyond understanding.
-    </p>
+    <textarea id="input" placeholder="Paste your chapter here..."></textarea>
+
+    <button onclick="renderChapter()">Generate Chapter</button>
 
     <hr>
 
+    <!-- Output -->
+    <div id="output" class="chapter"></div>
+
+    <br>
+
     <a href="index.html">← Back to Home</a>
+
+    <script>
+        function renderChapter() {
+            let text = document.getElementById("input").value;
+
+            // Split into paragraphs (double line breaks = new paragraph)
+            let paragraphs = text.split(/\n\s*\n/);
+
+            let html = "";
+
+            for (let p of paragraphs) {
+                if (p.trim() !== "") {
+                    html += "<p>" + p.trim().replace(/\n/g, "<br>") + "</p>";
+                }
+            }
+
+            document.getElementById("output").innerHTML = html;
+        }
+    </script>
 
 </body>
 </html>
