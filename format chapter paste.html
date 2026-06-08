@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lost - Chapter 1</title>
+
+    <style>
+        body {
+            max-width: 700px;
+            margin: auto;
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .chapter {
+            white-space: pre-wrap; /* keeps line breaks */
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Chapter 1</h1>
+
+    <!-- Paste area -->
+    <textarea id="input" placeholder="Paste your chapter here..."></textarea>
+
+    <button onclick="renderChapter()">Generate Chapter</button>
+
+    <hr>
+
+    <!-- Output -->
+    <div id="output" class="chapter"></div>
+
+    <br>
+
+    <a href="index.html">← Back to Home</a>
+
+    <script>
+        function renderChapter() {
+            let text = document.getElementById("input").value;
+
+            // Split into paragraphs (double line breaks = new paragraph)
+            let paragraphs = text.split(/\n\s*\n/);
+
+            let html = "";
+
+            for (let p of paragraphs) {
+                if (p.trim() !== "") {
+                    html += "<p>" + p.trim().replace(/\n/g, "<br>") + "</p>";
+                }
+            }
+
+            document.getElementById("output").innerHTML = html;
+        }
+    </script>
+
+</body>
+</html>
