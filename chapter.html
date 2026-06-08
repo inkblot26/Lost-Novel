@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter Reader</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: white;
+            color: #222;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 15px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        body.dark .top-bar {
+            background: #0f0f0f;
+            border-color: #333;
+        }
+
+        /* ===== CONTENT ===== */
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px 20px;
+
+            font-size: 24px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+
+            transition: max-width 0.3s ease;
+        }
+
+        /* ===== SETTINGS PANEL ===== */
+        .settings {
+            position: fixed;
+            top: 60px;
+            right: 15px;
+
+            background: rgba(255,255,255,0.95);
+            padding: 10px;
+            border-radius: 8px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            font-size: 14px;
+            z-index: 200;
+        }
+
+        body.dark .settings {
+            background: rgba(30,30,30,0.95);
+            color: #e6e6e6;
+        }
+
+        .settings h3 {
+            margin: 0;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* ===== DARK MODE ===== */
+        body.dark {
+            background: #0f0f0f;
+            color: #e6e6e6;
+        }
+
+        /* button */
+        button {
+            cursor: pointer;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div id="title">Loading chapter...</div>
+    <button onclick="toggleMode()">🌙</button>
+</div>
+
+<!-- SETTINGS -->
+<div class="settings">
+    <h3>Reader Settings</h3>
+
+    <label>Font Size</label>
+    <select id="fontSize" onchange="changeFontSize()">
+        <option value="20px">Extra Small</option>
+        <option value="24px" selected>Small</option>
+        <option value="28px">Medium</option>
+        <option value="32px">Large</option>
+        <option value="36px">Extra Large</option>
+    </select>
+
+    <label>Font</label>
+    <select id="fontFamily" onchange="changeFontFamily()">
+        <option value="Georgia">Georgia</option>
+        <option value="'Times New Roman'">Times New Roman</option>
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+    </select>
+
+    <label>Line Height</label>
+    <select id="lineHeight" onchange="changeLineHeight()">
+        <option value="1.5">Compact</option>
+        <option value="1.8" selected>Normal</option>
+        <option value="2.1">Relaxed</option>
+        <option value="2.4">Spacious</option>
+    </select>
+
+    <label>Reading Width</label>
+    <select id="readingWidth" onchange="changeReadingWidth()">
+        <option value="600px">Narrow</option>
+        <option value="800px" selected>Normal</option>
+        <option value="1000px">Wide</option>
+        <option value="95%">Full Screen</option>
+    </select>
+</div>
+
+<!-- CONTENT -->
+<div class="content" id="chapterText">Loading...</div>
+
+<script>
+/* =========================
+   LOAD CHAPTER FROM TXT
+========================= */
+
+const params = new URLSearchParams(window.location.search);
+const file = params.get("file");
+
+if (!file) {
+    document.getElementById("chapterText").innerText =
+        "No chapter file selected.\nExample: chapter.html?file=book1/ch001.txt";
+} else {
+    fetch(file)
+        .then(res => res.text())
+        .then(text => {
+
+            document.getElementById("chapterText").innerText = text;
+
+            // first line becomes title
+            const firstLine = text.split("\n")[0];
+            document.getElementById("title").innerText = firstLine;
+
+        })
+        .catch(() => {
+            document.getElementById("chapterText").innerText =
+                "Failed to load chapter file.";
+        });
+}
+
+/* =========================
+   DARK MODE
+========================= */
+function toggleMode() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("mode",
+        document.body.classList.contains("dark") ? "dark" : "light"
+    );
+}
+
+if (localStorage.getItem("mode") === "dark") {
+    document.body.classList.add("dark");
+}
+
+/* =========================
+   SETTINGS
+========================= */
+
+function changeFontSize() {
+    const v = document.getElementById("fontSize").value;
+    document.getElementById("chapterText").style.fontSize = v;
+    localStorage.setItem("fontSize", v);
+}
+
+function changeFontFamily() {
+    const v = document.getElementById("fontFamily").value;
+    document.getElementById("chapterText").style.fontFamily = v;
+    localStorage.setItem("fontFamily", v);
+}
+
+function changeLineHeight() {
+    const v = document.getElementById("lineHeight").value;
+    document.getElementById("chapterText").style.lineHeight = v;
+    localStorage.setItem("lineHeight", v);
+}
+
+function changeReadingWidth() {
+    const v = document.getElementById("readingWidth").value;
+    document.querySelector(".content").style.maxWidth = v;
+    localStorage.setItem("readingWidth", v);
+}
+
+/* =========================
+   LOAD SAVED SETTINGS
+========================= */
+
+const savedSize = localStorage.getItem("fontSize");
+if (savedSize) {
+    document.getElementById("chapterText").style.fontSize = savedSize;
+    document.getElementById("fontSize").value = savedSize;
+}
+
+const savedFont = localStorage.getItem("fontFamily");
+if (savedFont) {
+    document.getElementById("chapterText").style.fontFamily = savedFont;
+    document.getElementById("fontFamily").value = savedFont;
+}
+
+const savedLine = localStorage.getItem("lineHeight");
+if (savedLine) {
+    document.getElementById("chapterText").style.lineHeight = savedLine;
+    document.getElementById("lineHeight").value = savedLine;
+}
+
+const savedWidth = localStorage.getItem("readingWidth");
+if (savedWidth) {
+    document.querySelector(".content").style.maxWidth = savedWidth;
+    document.getElementById("readingWidth").value = savedWidth;
+}
+</script>
+
+</body>
+</html>
