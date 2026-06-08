@@ -155,10 +155,11 @@
         <p class="author">by Inkblot</p>
     </div>
 
-    <a class="btn" href="/Lost-Novel/book1/ch001.html">
-        Start Reading
+    <a class="btn" href="#" id="mainButton" onclick="openChapter(event)">
+        Loading...
     </a>
 
+    
     <div class="section">
         <h2>Prologue</h2>
         <p>
@@ -211,6 +212,38 @@
         }
     }
 </script>
+
+<script>
+    // start or continue button
+    const firstChapter = "/Lost-Novel/book1/ch001.html";
+    
+    function updateButton() {
+        let lastChapter = localStorage.getItem("lastChapter");
+        let btn = document.getElementById("mainButton");
+    
+        if (lastChapter) {
+            btn.innerText = "Continue Reading";
+        } else {
+            btn.innerText = "Read Chapter 1";
+        }
+    }
+    
+    function openChapter(event) {
+        event.preventDefault();
+    
+        let lastChapter = localStorage.getItem("lastChapter");
+    
+        if (lastChapter) {
+            window.location.href = lastChapter;
+        } else {
+            window.location.href = firstChapter;
+        }
+    }
+    
+    // run on page load
+    updateButton();
+</script>
+
     
 </body>
 </html>
