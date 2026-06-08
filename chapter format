@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lost - Chapter 1</title>
+
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .chapter {
+            white-space: pre-wrap;
+        }
+
+        .navigation {
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Chapter 1</h1>
+
+<div class="chapter">
+
+PASTE YOUR CHAPTER HERE
+
+</div>
+
+<div class="navigation">
+    <a href="../index.html">← Back to Home</a>
+</div>
+
+</body>
+</html>
