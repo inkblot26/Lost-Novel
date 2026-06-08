@@ -96,14 +96,11 @@
             background: rgba(30,30,30,0.95);
         }
 
-        /*CSS for space between lines*/
-        <label>Line Height:</label>
-        <select id="lineHeight" onchange="changeLineHeight()">
-            <option value="1.5">Compact</option>
-            <option value="1.8" selected>Normal</option>
-            <option value="2.1">Relaxed</option>
-            <option value="2.4">Spacious</option>
-        </select>
+        .reader-settings h3 {
+            margin: 0 0 8px 0;
+            text-align: center;
+            font-size: 16px;
+        }
         
     </style>
 </head>
@@ -112,8 +109,9 @@
 <!-- Dark/Light Toggle Button -->
 <button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
 
-<!-- Font style and size setting-->    
+<!-- Font style,size and line spacing setting-->    
 <div class="reader-settings">
+     <h3>Reader Settings</h3>
     <label>Font Size:</label>
     <select id="fontSize" onchange="changeFontSize()">
         <option value="18px">Small</option>
@@ -128,6 +126,14 @@
         <option value="'Times New Roman'">Times New Roman</option>
         <option value="Arial">Arial</option>
         <option value="Verdana">Verdana</option>
+    </select>
+
+    <label>Line Height:</label>
+    <select id="lineHeight" onchange="changeLineHeight()">
+        <option value="1.5">Compact</option>
+        <option value="1.8" selected>Normal</option>
+        <option value="2.1">Relaxed</option>
+        <option value="2.4">Spacious</option>
     </select>
 </div>
     
