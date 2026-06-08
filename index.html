@@ -4,12 +4,14 @@
     <title>Lost: Ashes of Vengeance</title>
 
     <style>
+        /* ========== BASE (LIGHT MODE DEFAULT) ========== */
         body {
             margin: 0;
             font-family: Georgia, serif;
-            background-color: #0f0f0f;
-            color: #e6e6e6;
+            background-color: #f5f5f5;
+            color: #111;
             line-height: 1.7;
+            transition: 0.3s ease;
         }
 
         .container {
@@ -28,7 +30,7 @@
             text-align: center;
             font-style: italic;
             margin-bottom: 40px;
-            color: #aaa;
+            color: #555;
         }
 
         .btn {
@@ -36,8 +38,8 @@
             width: fit-content;
             margin: 20px auto;
             padding: 12px 25px;
-            background: #ffffff;
-            color: #000;
+            background: #111;
+            color: #fff;
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
@@ -48,23 +50,57 @@
         }
 
         a {
+            color: #0066cc;
+        }
+
+        /* ========== DARK MODE ========== */
+        body.dark {
+            background-color: #0f0f0f;
+            color: #e6e6e6;
+        }
+
+        body.dark .tagline {
+            color: #aaa;
+        }
+
+        body.dark .btn {
+            background: #ffffff;
+            color: #000;
+        }
+
+        body.dark a {
             color: #9ecbff;
+        }
+
+        /* ========== TOGGLE BUTTON ========== */
+        .toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
 
+<!-- Dark/Light Toggle Button -->
+<button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
+    
 <div class="container">
 
     <h1>Lost: Ashes of Vengeance</h1>
-
+    <h3>By: Inkblot</h3>
     <a class="btn" href="/Lost-Novel/book1/ch001.html">
         Start Reading
     </a>
 
     <div class="section">
-        <h2>Synopsis</h2>
+        <h2>Prologue</h2>
         <p>
             In the age of the Galactic Awakening, humanity reached beyond the stars. Hopeful and curious, they
         encountered the Chaturi, a solitary traveler of boundless intellect and mystery, unlike anything ever known
@@ -83,10 +119,13 @@
         ceased to function, wiped away by forces unknown. Civilization crumbled. Billions perished.
         And yet, in the ruins, survivors awakened to something new, or perhaps something ancient — Verdant
         Echoes, a power drawn not from machines, but from life itself.
+        </p>
+        <p><
         Centuries have passed. Now begins the Verdant Age.
         </p>
     </div>
 
+    
     <div class="section">
         <h2>Chapters</h2>
         <ul>
