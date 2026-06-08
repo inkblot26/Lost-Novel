@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lost World Map</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background-color: #f5f5f5;
+            color: #111;
+            line-height: 1.7;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .map-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 40px auto 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        /* DARK MODE */
+        body.dark {
+            background-color: #0f0f0f;
+            color: #e6e6e6;
+        }
+
+        body.dark img {
+            border-color: #333;
+        }
+
+        body.dark .description {
+            color: #bbb;
+        }
+
+        body.dark .back {
+            color: #9ecbff;
+        }
+
+        /* toggle button */
+        .toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
+
+<h1>Lost World Map</h1>
+
+<div class="map-container">
+    <img src="images/worldmap.jpg" alt="World Map">
+</div>
+
+<div class="description">
+    This map represents the known world after the collapse of civilization. 
+</div>
+
+<a class="back" href="/Lost-Novel/lore/">← Back to Lore Archive</a>
+
+<script>
+if (localStorage.getItem("mode") === "dark") {
+    document.body.classList.add("dark");
+}
+
+function toggleMode() {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("mode", "dark");
+    } else {
+        localStorage.setItem("mode", "light");
+    }
+}
+</script>
+
+</body>
+</html>
