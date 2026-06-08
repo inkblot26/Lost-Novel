@@ -191,16 +191,20 @@
     <!-- Font size selector -->
     <label>Font Size:</label>
     <select id="fontSize" onchange="changeFontSize()">
-        <option value="20px">Small</option>
-        <option value="24px" selected>Normal</option>
-        <option value="28px">Large</option>
+        <option value="20px">Extra Small</option>
+        <option value="24px" selected>Small</option>
+        <option value="28px">Medium</option>
+        <option value="32px">Large</option>
+        <option value="36px">Extra Large</option>
     </select>
 
     <!-- Font type selector -->
     <label>Font:</label>
     <select id="fontFamily" onchange="changeFontFamily()">
         <option value="Georgia">Georgia</option>
+        <option value="'Times New Roman'">Times New Roman</option>
         <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
     </select>
 
     <!-- Line spacing -->
@@ -208,7 +212,8 @@
     <select id="lineHeight" onchange="changeLineHeight()">
         <option value="1.5">Compact</option>
         <option value="1.8" selected>Normal</option>
-        <option value="2.2">Relaxed</option>
+        <option value="2.1">Relaxed</option>
+        <option value="2.4">Spacious</option>
     </select>
 
     <!-- Reading width -->
@@ -217,6 +222,7 @@
         <option value="600px">Narrow</option>
         <option value="800px" selected>Normal</option>
         <option value="1000px">Wide</option>
+        <option value="95%">Full Screen</option>
     </select>
 </div>
 
