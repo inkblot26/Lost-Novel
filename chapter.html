@@ -94,13 +94,14 @@
         /* Link styling (LIGHT MODE) */
         .nav a {
             text-decoration: none;
-            font-weight: bold;
+            font-weight: normal;
             color: #111; /* black text instead of blue */
         }
 
         /* Link styling (DARK MODE) */
         body.dark .nav a {
             color: #e6e6e6; /* light text in dark mode */
+            font-weight: normal;
         }
 
         /* =====================================================
@@ -141,6 +142,17 @@
             margin: 0;
             text-align: center;
             font-size: 14px;
+        }
+
+         /* =====================================================
+           DISABLE CHAPTER TEXT SELECTION
+        ===================================================== */
+        .chapter {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;    /*remove I-beam cursor*/
         }
     </style>
 </head>
