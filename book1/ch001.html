@@ -193,12 +193,23 @@
 <!-- ===== CHAPTER CONTENT (ONLY THIS IS AFFECTED) ===== -->
 <div class="content" id="reader">
 
-    <h1>Chapter 1: Town of Tala</h1>
+    /* =========================
+   LOAD CHAPTER FROM TXT
+========================= */
+const params = new URLSearchParams(window.location.search);
+const file = params.get("file") || "book1/ch001.txt"; // default chapter
 
-    <div class="chapter">
-The sun crept slowly over the hills...
-(Your full chapter text here)
-    </div>
+fetch(file)
+    .then(res => res.text())
+    .then(text => {
+        document.getElementById("chapterText").innerText = text;
+
+        const firstLine = text.split("\n")[0];
+        document.getElementById("chapterTitle").innerText = firstLine;
+    })
+    .catch(() => {
+        document.getElementById("chapterText").innerText = "Failed to load chapter.";
+    });
 
     <div class="nav">
         <a href="#">← Previous</a>
