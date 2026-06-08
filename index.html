@@ -4,6 +4,35 @@
     <title>Lost: Ashes of Vengeance</title>
 
     <style>
+        /* ========CSS for title and author===========*/
+        .title-block {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive title (prevents ugly breaking) */
+        .title-block h1 {
+            font-size: clamp(32px, 5vw, 60px);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            line-height: 1.2;
+            word-break: keep-all;
+        }
+        
+        /* Author styling */
+        .author {
+            font-size: 16px;
+            margin: 0;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Dark mode author color */
+        body.dark .author {
+            color: #aaa;
+        }
+        
         /* ========== BASE (LIGHT MODE DEFAULT) ========== */
         body {
             margin: 0;
@@ -93,8 +122,11 @@
     
 <div class="container">
 
-    <h1>Lost: Ashes of Vengeance</h1>
-    <h3>By: Inkblot</h3>
+    <div class="title-block">
+        <h1>Lost: Ashes of Vengeance</h1>
+        <p class="author">by Inkblot</p>
+    </div>
+
     <a class="btn" href="/Lost-Novel/book1/ch001.html">
         Start Reading
     </a>
@@ -120,7 +152,7 @@
         And yet, in the ruins, survivors awakened to something new, or perhaps something ancient — Verdant
         Echoes, a power drawn not from machines, but from life itself.
         </p>
-        <p><
+        <p>
         Centuries have passed. Now begins the Verdant Age.
         </p>
     </div>
