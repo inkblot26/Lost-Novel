@@ -3,156 +3,100 @@
 <head>
     <title>Chapter Reader</title>
 
-        <style>
+    <style>
         body {
             margin: 0;
-            background-color: #ffffff;
-            color: #222;
             font-family: Georgia, serif;
+            background: white;
+            color: #222;
+            transition: background 0.3s, color 0.3s;
         }
 
-        /* ===== TOP HEADER ===== */
+        /* ===== TOP BAR ===== */
         .top-bar {
             position: sticky;
             top: 0;
-            background: #ffffff;
+            z-index: 100;
+            background: white;
             border-bottom: 1px solid #ddd;
             padding: 10px 15px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 50;
         }
 
         body.dark .top-bar {
-            background: #121212;
-            border-bottom: 1px solid #333;
+            background: #0f0f0f;
+            border-color: #333;
         }
 
-        .book-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .book-title {
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .chapter-title {
-            font-size: 13px;
-            opacity: 0.7;
-        }
-
-        .top-buttons button {
-            margin-left: 10px;
-            padding: 6px 10px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-        }
-
-        /* ===== READER CONTENT (ONLY TEXT AFFECTED) ===== */
+        /* ===== CONTENT ===== */
         .content {
             max-width: 800px;
-            margin: 0 auto;
+            margin: auto;
             padding: 30px 20px;
+
             font-size: 24px;
             line-height: 1.8;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .chapter {
             white-space: pre-wrap;
-            text-align: justify;
+
+            transition: max-width 0.3s ease;
         }
 
-        /* ===== NAV ===== */
-        .nav {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ccc;
+        /* ===== SETTINGS PANEL ===== */
+        .settings {
+            position: fixed;
+            top: 60px;
+            right: 15px;
+
+            background: rgba(255,255,255,0.95);
+            padding: 10px;
+            border-radius: 8px;
+
             display: flex;
-            justify-content: center;
-            gap: 40px;
+            flex-direction: column;
+            gap: 8px;
+
+            font-size: 14px;
+            z-index: 200;
         }
 
-        .nav a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #0066cc;
+        body.dark .settings {
+            background: rgba(30,30,30,0.95);
+            color: #e6e6e6;
+        }
+
+        .settings h3 {
+            margin: 0;
+            font-size: 16px;
+            text-align: center;
         }
 
         /* ===== DARK MODE ===== */
         body.dark {
-            background-color: #0f0f0f;
+            background: #0f0f0f;
             color: #e6e6e6;
         }
 
-        body.dark a {
-            color: #9ecbff;
-        }
-
-        body.dark .nav a {
-            color: #9ecbff;
-        }
-
-        body.dark h1 {
-            color: #fff;
-        }
-
-        /* ===== SETTINGS PANEL ===== */
-        .reader-settings {
-            position: fixed;
-            top: 60px;
-            right: 15px;
-            background: rgba(255,255,255,0.95);
-            padding: 10px;
-            border-radius: 8px;
-            display: none;
-            flex-direction: column;
-            gap: 8px;
-            font-size: 14px;
-            z-index: 100;
-        }
-
-        body.dark .reader-settings {
-            background: rgba(30,30,30,0.95);
-        }
-
-        .reader-settings h3 {
-            margin: 0;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        /* toggle buttons */
-        .toggle {
+        /* button */
+        button {
             cursor: pointer;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
         }
     </style>
-</head>
 </head>
 
 <body>
 
-<!-- ===== TOP BAR ===== -->
+<!-- TOP BAR -->
 <div class="top-bar">
-    <div class="book-info">
-        <div class="book-title">Lost: Ashes of VEngeance</div>
-        <div class="title">Loading chapter...</div>
-    </div>
-
-    <div class="top-buttons">
-        <button onclick="toggleSettings()">⚙ Settings</button>
-        <button onclick="toggleMode()">🌙 / ☀</button>
-    </div>
+    <div id="title">Loading chapter...</div>
+    <button onclick="toggleMode()">🌙</button>
 </div>
-    
+
 <!-- SETTINGS -->
 <div class="settings">
     <h3>Reader Settings</h3>
