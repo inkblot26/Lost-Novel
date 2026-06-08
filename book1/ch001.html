@@ -74,6 +74,27 @@
             font-weight: bold;
             z-index: 10;
         }
+
+        /*css font style and size*/
+        .reader-settings {
+            position: fixed;
+            top: 60px;
+            right: 15px;
+        
+            background: rgba(255,255,255,0.95);
+            padding: 10px;
+            border-radius: 8px;
+        
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        
+            font-size: 14px;
+        }
+        
+        body.dark .reader-settings {
+            background: rgba(30,30,30,0.95);
+        }
         
     </style>
 </head>
@@ -81,6 +102,25 @@
 
 <!-- Dark/Light Toggle Button -->
 <button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
+
+<!-- Font style and size setting-->    
+<div class="reader-settings">
+    <label>Font Size:</label>
+    <select id="fontSize" onchange="changeFontSize()">
+        <option value="18px">Small</option>
+        <option value="20px" selected>Medium</option>
+        <option value="24px">Large</option>
+        <option value="28px">Extra Large</option>
+    </select>
+
+    <label>Font:</label>
+    <select id="fontFamily" onchange="changeFontFamily()">
+        <option value="Georgia">Georgia</option>
+        <option value="'Times New Roman'">Times New Roman</option>
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+    </select>
+</div>
     
 <h1>Chapter 1: Town of Tala</h1>
 
@@ -212,5 +252,35 @@ An invisible thread of destiny coils around you, binding your path to luck — b
     localStorage.setItem("lastChapter", window.location.href);
 </script>    
 
+<script>
+    //script for change fontstyle and size
+    function changeFontSize() {
+        const size = document.getElementById("fontSize").value;
+    
+        document.body.style.fontSize = size;
+        localStorage.setItem("fontSize", size);
+    }
+    
+    function changeFontFamily() {
+        const font = document.getElementById("fontFamily").value;
+    
+        document.body.style.fontFamily = font;
+        localStorage.setItem("fontFamily", font);
+    }
+    
+    // Load saved settings
+    const savedSize = localStorage.getItem("fontSize");
+    if (savedSize) {
+        document.body.style.fontSize = savedSize;
+        document.getElementById("fontSize").value = savedSize;
+    }
+    
+    const savedFont = localStorage.getItem("fontFamily");
+    if (savedFont) {
+        document.body.style.fontFamily = savedFont;
+        document.getElementById("fontFamily").value = savedFont;
+    }
+</script>
+    
 </body>
 </html>
