@@ -24,9 +24,21 @@
             white-space: pre-wrap;
         }
 
-        .navigation {
+        .nav {
             margin-top: 50px;
-            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0066cc;
         }
 
         /* ===== DARK MODE ===== */
@@ -48,6 +60,19 @@
         /* optional: soften text contrast */
         body.dark h1 {
             color: #ffffff;
+        }
+
+        /* ===== TOGGLE BUTTON ===== */
+        .toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            z-index: 10;
         }
         
     </style>
