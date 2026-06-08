@@ -95,6 +95,15 @@
         body.dark .reader-settings {
             background: rgba(30,30,30,0.95);
         }
+
+        /*CSS for space between lines*/
+        <label>Line Height:</label>
+        <select id="lineHeight" onchange="changeLineHeight()">
+            <option value="1.5">Compact</option>
+            <option value="1.8" selected>Normal</option>
+            <option value="2.1">Relaxed</option>
+            <option value="2.4">Spacious</option>
+        </select>
         
     </style>
 </head>
@@ -253,19 +262,23 @@ An invisible thread of destiny coils around you, binding your path to luck — b
 </script>    
 
 <script>
-    //script for change fontstyle and size
+    //script for change fontstyle,size, spacing
     function changeFontSize() {
         const size = document.getElementById("fontSize").value;
-    
         document.body.style.fontSize = size;
         localStorage.setItem("fontSize", size);
     }
     
     function changeFontFamily() {
         const font = document.getElementById("fontFamily").value;
-    
         document.body.style.fontFamily = font;
         localStorage.setItem("fontFamily", font);
+    }
+
+    function changeLineHeight() {
+        const value = document.getElementById("lineHeight").value;
+        document.body.style.lineHeight = value;
+        localStorage.setItem("lineHeight", value);
     }
     
     // Load saved settings
@@ -279,6 +292,12 @@ An invisible thread of destiny coils around you, binding your path to luck — b
     if (savedFont) {
         document.body.style.fontFamily = savedFont;
         document.getElementById("fontFamily").value = savedFont;
+    }
+
+    const savedLineHeight = localStorage.getItem("lineHeight");
+    if (savedLineHeight) {
+        document.body.style.lineHeight = savedLineHeight;
+        document.getElementById("lineHeight").value = savedLineHeight;
     }
 </script>
     
