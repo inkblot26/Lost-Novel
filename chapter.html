@@ -143,7 +143,7 @@
 <div class="top-bar">
     <div class="book-info">
         <div class="book-title">Lost: Ashes of Vengeance</div>
-        <div class="title">Loading chapter...</div>
+        <div class="chapter-title" id="topChapterTitle">Loading Chapter...</div>
     </div>
 
     <div class="top-buttons">
@@ -293,12 +293,18 @@ window.onload = function () {
         .then(text => {
     
             const lines = text.split("\n");
-    
+            
             // first line = title
-            document.getElementById("chapterTitle").innerText = lines[0];
-    
-            // rest = chapter content
-            document.getElementById("chapterText").innerText = lines.slice(1).join("\n");
+            const title = lines[0]?.trim() || "Unknown Chapter";
+            
+            // TOP BAR title
+            document.getElementById("topChapterTitle").innerText = title;
+            
+            // CENTER title
+            document.getElementById("chapterTitle").innerText = title;
+            
+            // chapter content
+            document.getElementById("chapterText").innerText = lines.slice(1).join("\n"); 
     
         })
         .catch(err => {
