@@ -281,38 +281,55 @@ window.onload = function () {
 </script>
 
 <script>
-    /* =========================
-       LOAD CHAPTER FROM TXT
-    ========================= */
-    
-    const params = new URLSearchParams(window.location.search);
-    const file = params.get("file") || "/Lost-Novel/book1/ch001.txt";
-    
-    fetch(file)
-        .then(res => res.text())
-        .then(text => {
-    
-            const lines = text.split("\n");
-            
-            // first line = title
-            const title = lines[0]?.trim() || "Unknown Chapter";
-            
-            // TOP BAR title
-            document.getElementById("topChapterTitle").innerText = title;
-            
-            // CENTER title
-            document.getElementById("chapterTitle").innerText = title;
-            
-            // chapter content
-            document.getElementById("chapterText").innerText = lines.slice(1).join("\n"); 
-    
-        })
-        .catch(err => {
-            document.getElementById("chapterText").innerText =
-                "Failed to load chapter file.";
-        });
+/* =========================
+   LOAD CHAPTER FROM TXT
+========================= */
+
+const params = new URLSearchParams(window.location.search);
+const file = params.get("file") || "/Lost-Novel/book1/ch001.txt";
+
+function getChapterNumber(file) {
+    const match = file.match(/ch(\d+)\.txt/);
+    return match ? parseInt(match[1]) : 1;
+}
+
+function buildChapterFile(num) {
+    const padded = String(num).padStart(3, "0");
+    return `/Lost-Novel/book1/ch${padded}.txt`;
+}
+
+fetch(file)
+    .then(res => res.text())
+    .then(text => {
+
+        const lines = text.split("\n");
+
+        // title
+        const title = lines[0]?.trim() || "Unknown Chapter";
+
+        document.getElementById("topChapterTitle").innerText = title;
+        document.getElementById("chapterTitle").innerText = title;
+
+        // content
+        document.getElementById("chapterText").innerText = lines.slice(1).join("\n");
+
+        // chapter navigation (IMPORTANT: inside fetch)
+        const current = getChapterNumber(file);
+
+        const prev = current > 1 ? buildChapterFile(current - 1) : null;
+        const next = buildChapterFile(current + 1);
+
+        document.querySelector(".nav").innerHTML = `
+            <a href="?file=${prev}">← Previous</a>
+            <a href="/Lost-Novel/">Home</a>
+            <a href="?file=${next}">Next →</a>
+        `;
+    })
+    .catch(err => {
+        document.getElementById("chapterText").innerText =
+            "Failed to load chapter file.";
+    });
 </script>
-    
     
 </body>
 </html>
