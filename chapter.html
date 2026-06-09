@@ -144,6 +144,52 @@
             font-size: 14px;
         }
 
+        /* =========================
+           CHAPTER DROPDOWN PANEL
+        ========================= */
+        .chapter-panel {
+            position: fixed;
+            top: 60px;
+            left: 15px;
+            width: 280px;
+            max-height: 70vh;
+            overflow-y: auto;
+            background: rgba(255,255,255,0.98);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            display: none;
+            z-index: 200;
+        }
+        
+        /* dark mode */
+        body.dark .chapter-panel {
+            background: rgba(30,30,30,0.98);
+            border: 1px solid #333;
+        }
+        
+        /* chapter links */
+        .chapter-panel a {
+            display: block;
+            padding: 6px 8px;
+            text-decoration: none;
+            color: #111;
+            border-radius: 5px;
+        }
+        
+        .chapter-panel a:hover {
+            background: rgba(0,0,0,0.05);
+        }
+        
+        /* dark mode links */
+        body.dark .chapter-panel a {
+            color: #e6e6e6;
+        }
+        
+        body.dark .chapter-panel a:hover {
+            background: rgba(255,255,255,0.08);
+        }
+        
          /* =====================================================
            DISABLE CHAPTER TEXT SELECTION
         ===================================================== */
@@ -154,6 +200,7 @@
             user-select: none;
             cursor: default;    /*remove I-beam cursor*/
         }
+        
     </style>
 </head>
 
@@ -168,14 +215,16 @@
 <div class="top-bar">
     <div class="book-info">
         <div class="book-title">Lost: Ashes of Vengeance</div>
-
         <!-- This is updated using JavaScript -->
         <div class="chapter-title" id="topChapterTitle">
             Loading...
         </div>
+        <!-- CHAPTER DROPDOWN PANEL -->
+        <div id="chapterPanel" class="chapter-panel"></div>
     </div>
 
     <div class="top-buttons">
+        <button onclick="toggleChapterList()">📖 Chapters</button>
         <button onclick="toggleSettings()">⚙ Settings</button>
         <button onclick="toggleMode()">🌙 / ☀</button>
     </div>
@@ -333,7 +382,6 @@ window.onload = function () {
      LOAD CHAPTER FILE + NAVIGATION SYSTEM
 ===================================================== -->
 <script>
-
 // Get file name from URL (?file=ch001.txt)
 const params = new URLSearchParams(window.location.search);
 const file = params.get("file") || "/Lost-Novel/book1/ch001.txt";
@@ -431,6 +479,53 @@ fetch(file)
         );
     });
 
+</script>
+
+<script>
+    let chapterPanelOpen = false;
+    /* =========================
+            TOGGLE PANEL
+    ========================= */
+    function toggleChapterList() {
+        const panel = document.getElementById("chapterPanel");
+    
+        chapterPanelOpen = !chapterPanelOpen;
+    
+        if (chapterPanelOpen) {
+            panel.style.display = "block";
+            loadChapterList();
+        } else {
+            panel.style.display = "none";
+        }
+    }
+    
+    /* =========================
+       LOAD chaplist.txt
+    ========================= */
+    function loadChapterList() {
+    
+        fetch("/Lost-Novel/book1/chaplist.txt")
+            .then(res => res.text())
+            .then(text => {
+    
+                const lines = text.trim().split("\n");
+    
+                let html = "";
+    
+                lines.forEach(line => {
+    
+                    const [file, title] = line.split("|");
+    
+                    html += `
+                        <a href="?file=/Lost-Novel/book1/${file.trim()}">
+                            ${title.trim()}
+                        </a>
+                    `;
+                });
+    
+                document.getElementById("chapterPanel").innerHTML = html;
+            });
+    }
 </script>
 
 </body>
