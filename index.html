@@ -272,13 +272,13 @@
 
     // Updates button text depending on saved progress
     function updateButton() {
-        let lastChapter = localStorage.getItem("lastChapter");
-        let btn = document.getElementById("mainButton");
-
-        if (lastChapter) {
+        const btn = document.getElementById("mainButton");
+        const hasHistory = localStorage.getItem("lastChapter");
+    
+        if (hasHistory) {
             btn.innerText = "Continue Reading";
         } else {
-            btn.innerText = "Read Chapter 1";
+            btn.innerText = "Start Reading";
         }
     }
 
