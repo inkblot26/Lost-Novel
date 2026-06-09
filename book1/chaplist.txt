@@ -1,0 +1,69 @@
+ch001.txt|Chapter 1: Town of Tala
+ch002.txt|Chapter 2: Rare Echo
+ch003.txt|Chapter 3: Lines on Parchment
+ch004.txt|Chapter 4: A Twist of Luck
+ch005.txt|Chapter 5: The Burden of the Blade
+ch006.txt|Chapter 6: Balance Broken
+ch007.txt|Chapter 7: The Fire in his Eyes
+ch008.txt|Chapter 8: What Cannot Be Held
+ch009.txt|Chapter 9: In That One Moment
+ch010.txt|Chapter 10: In the Ashes' Wake
+ch011.txt|Chapter 11: Luck Never Saved Anyone
+ch012.txt|Chapter 12: Refuted Echo
+ch013.txt|Chapter 13: Flicker of Fire
+ch014.txt|Chapter 14: Fangnotes and Bloomfangs
+ch015.txt|Chapter 15: Not fast enough
+ch016.txt|Chapter 16: Nothing Serious
+ch017.txt|Chapter 17: Echoes we Keep
+ch018.txt|Chapter 18: It happened so fast
+ch019.txt|Chapter 19: Blood Brothers
+ch020.txt|Chapter 20: Fire in the Eyes
+ch021.txt|Chapter 21: Bond of Respect
+ch022.txt|Chapter 22: Before the dark
+ch023.txt|Chapter 23: Held Back by Blood
+ch024.txt|Chapter 24: The Full Moon
+ch025.txt|Chapter 25: A Moment Seized
+ch026.txt|Chapter 26: More than a Job
+ch027.txt|Chapter 27: Bonds and Buckler
+ch028.txt|Chapter 28: Kingsfall
+ch029.txt|Chapter 29: Treadmill of Tyranny
+ch030.txt|Chapter 30: What was Taken
+ch031.txt|Chapter 31: The Faces We Wear
+ch032.txt|Chapter 32: When Quiet Hands Shake
+ch033.txt|Chapter 33: Beyond the Walls
+ch034.txt|Chapter 34: Old Bonds, New Ties
+ch035.txt|Chapter 35: Three Days of Silence
+ch036.txt|Chapter 36: The Threefold Assault
+ch037.txt|Chapter 37: Climb to the Top
+ch038.txt|Chapter 38: The Ones Who Stayed Behind
+ch039.txt|Chapter 39: A clean shot
+ch040.txt|Chapter 40: Three results, One resolve
+ch041.txt|Chapter 41: The Voice of Authority
+ch042.txt|Chapter 42: Guided by Purpose
+ch043.txt|Chapter 43: Bonded Wildborn
+ch044.txt|Chapter 44: Stand Until the End
+ch045.txt|Chapter 45: The Room Below
+ch046.txt|Chapter 46: Let the City Rest
+ch047.txt|Chapter 47: To Train, To Rest, To Ready
+ch048.txt|Chapter 48: The Calm that Prepares
+ch049.txt|Chapter 49: Lesser Villages, Greater Dangers
+ch050.txt|Chapter 50: Beyond the West
+ch051.txt|Chapter 51: A Taste of the Unknown
+ch052.txt|Chapter 52: Halfway to Graylatch
+ch053.txt|Chapter 53: The Silent One
+ch054.txt|Chapter 54: Survival is the Only Law
+ch055.txt|Chapter 55: Blood and Water
+ch056.txt|Chapter 56: Where the Cliff Casts its Shadow
+ch057.txt|Chapter 57: The man called Lawrence
+ch058.txt|Chapter 58: Words Carried by a Bird
+ch059.txt|Chapter 59: The Cliffside Warning
+ch060.txt|Chapter 60: Whispers from the Camp
+ch061.txt|Chapter 61: Enemies in the Mist
+ch062.txt|Chapter 62: The Tail's Grip
+ch063.txt|Chapter 63: The Ambush Unleashed
+ch064.txt|Chapter 64: Awareness in the Dark
+ch065.txt|Chapter 65: Beware What Hides
+ch066.txt|Chapter 66: Scar of the Past
+ch067.txt|Chapter 67: The Fall of Lipad
+ch068.txt|Chapter 68: The Pinky Vow
+ch069.txt|Chapter 69: Shield of Unity
