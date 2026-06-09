@@ -429,7 +429,7 @@ let next = null;
 fetch(file)
     .then(res => res.text())
     .then(text => {
-
+        localStorage.setItem("lastChapter", window.location.href);
         const lines = text.split("\n");
 
         // FIRST LINE = chapter title
