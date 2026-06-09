@@ -155,6 +155,65 @@
             border-radius: 5px;
             font-weight: bold;
         }
+
+        /* =====================================================
+           7. LORE DROPDOWN (TOP BAR MENU)
+           Reuses chapter dropdown styling style
+        ===================================================== */
+        
+        .chapter-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* dropdown box */
+        .chapter-panel {
+            position: absolute;
+            top: 40px;
+            left: 0;
+        
+            width: 240px;
+            max-height: 300px;
+            overflow-y: auto;
+        
+            background: rgba(255,255,255,0.98);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        
+            padding: 10px;
+            display: none;
+        
+            text-align: left;
+            z-index: 200;
+        }
+        
+        body.dark .chapter-panel {
+            background: rgba(30,30,30,0.98);
+            border: 1px solid #333;
+        }
+        
+        /* links inside dropdown */
+        .chapter-panel a {
+            display: block;
+            padding: 6px 8px;
+        
+            text-decoration: none;
+            color: #111;
+            border-radius: 5px;
+        }
+        
+        body.dark .chapter-panel a {
+            color: #e6e6e6;
+        }
+        
+        .chapter-panel a:hover {
+            background: rgba(0,0,0,0.05);
+        }
+        
+        body.dark .chapter-panel a:hover {
+            background: rgba(255,255,255,0.08);
+        }
+        
     </style>
 </head>
 
@@ -170,14 +229,25 @@
         <a class="book-title" href="/Lost-Novel/">
             Lost: Ashes of Vengeance
         </a>
-        <div class="chapter-title">
-            Lore Archive
-        </div>
     </div>
 
     <!-- RIGHT: CONTROLS -->
     <div class="top-buttons">
+    
+        <!-- LORE DROPDOWN -->
+        <div class="chapter-wrapper">
+    
+            <button onclick="toggleLoreList()">
+                📚 Lore
+            </button>
+    
+            <div id="lorePanel" class="chapter-panel"></div>
+    
+        </div>
+    
+        <!-- DARK MODE -->
         <button onclick="toggleMode()">🌙 / ☀</button>
+    
     </div>
 
 </div>
@@ -189,7 +259,7 @@
      PAGE CONTENT
 ===================================================== -->
 
-<h1>Lost World Map</h1>
+<h1>World Map</h1>
 
 <div class="map-container">
     <img src="/Lost-Novel/lore/Lost World.jpg" alt="World Map">
@@ -208,19 +278,63 @@
      DARK MODE SCRIPT
 ===================================================== -->
 <script>
-if (localStorage.getItem("mode") === "dark") {
-    document.body.classList.add("dark");
-}
-
-function toggleMode() {
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-        localStorage.setItem("mode", "dark");
-    } else {
-        localStorage.setItem("mode", "light");
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark");
     }
-}
+    
+    function toggleMode() {
+        document.body.classList.toggle("dark");
+    
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    }
+
+    function toggleLoreList() {
+        const panel = document.getElementById("lorePanel");
+    
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+            loadLoreList();
+        }
+    }
+
+    function loadLoreList() {
+        const lore = [
+            {
+                name: "World Map",
+                link: "/Lost-Novel/lore/worldmap.html"
+            },
+            {
+                name: "Echo System",
+                link: "/Lost-Novel/lore/echosystem.html"
+            },
+            {
+                name: "List of Wildborn",
+                link: "/Lost-Novel/lore/wildborn.html"
+            },
+            {
+                name: "List of Primeflora",
+                link: "/Lost-Novel/lore/primeflora.html"
+            }
+        ];
+    
+        let html = "";
+    
+        lore.forEach(item => {
+            html += `
+                <a href="${item.link}">
+                    ${item.name}
+                </a>
+            `;
+        });
+        document.getElementById("lorePanel").innerHTML = html;
+    }
+    
 </script>
 
 </body>
