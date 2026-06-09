@@ -349,6 +349,12 @@ function buildChapterFile(num) {
     return `/Lost-Novel/book1/ch${String(num).padStart(3, "0")}.txt`;
 }
 
+/* =========================
+   GLOBAL CHAPTER LINKS
+========================= */
+let prev = null;
+let next = null;
+    
 /* ---- load chapter text file ---- */
 fetch(file)
     .then(res => res.text())
@@ -369,12 +375,23 @@ fetch(file)
         document.getElementById("chapterText").innerText =
             lines.slice(1).join("\n");
 
+        /* =========================
+           RESTORE SAVED SCROLL POSITION
+        ========================= */
+        const savedScroll = localStorage.getItem("scroll_" + file);
+        
+        if (savedScroll) {
+            setTimeout(() => {
+                window.scrollTo(0, parseInt(savedScroll));
+            }, 100);
+        }
+
+        
         /* ---- navigation logic ---- */
 
         const current = getChapterNumber(file);
-
-        const prev = current > 1 ? buildChapterFile(current - 1) : null;
-        const next = buildChapterFile(current + 1);
+        prev = current > 1 ? buildChapterFile(current - 1) : null;
+        next = buildChapterFile(current + 1);
 
         // replace navigation buttons dynamically
         document.querySelector(".nav").innerHTML = `
@@ -382,10 +399,36 @@ fetch(file)
             <a href="/Lost-Novel/">Home</a>
             <a href="?file=${next}">Next →</a>
         `;
+
+        /* =========================
+           KEYBOARD NAVIGATION
+        ========================= */
+        document.addEventListener("keydown", (e) => {
+        
+            // LEFT ARROW → Previous Chapter
+            if (e.key === "ArrowLeft" && prev) {
+                window.location.href = "?file=" + prev;
+            }
+        
+            // RIGHT ARROW → Next Chapter
+            if (e.key === "ArrowRight" && next) {
+                window.location.href = "?file=" + next;
+            }
+        
+        });
     })
+    
     .catch(() => {
         document.getElementById("chapterText").innerText =
             "Failed to load chapter file.";
+    });
+    
+    // Save scroll position
+    window.addEventListener("scroll", () => {
+        localStorage.setItem(
+            "scroll_" + file,
+            window.scrollY
+        );
     });
 
 </script>
