@@ -445,6 +445,9 @@ fetch(file)
         document.getElementById("chapterText").innerText =
             lines.slice(1).join("\n");
 
+        // SAVE LAST READ CHAPTER (IMPORTANT FIX)
+        localStorage.setItem("lastChapter", window.location.href);
+
         /* =========================
            RESTORE SAVED SCROLL POSITION
         ========================= */
