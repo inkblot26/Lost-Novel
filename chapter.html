@@ -147,17 +147,25 @@
         /* =========================
            CHAPTER DROPDOWN PANEL
         ========================= */
+        .chapter-wrapper {
+            position: relative; /* IMPORTANT: anchor for dropdown */
+            display: inline-block;
+        }
+        
+        /* dropdown */
         .chapter-panel {
-            position: fixed;
-            top: 60px;
-            left: 15px;
+            position: absolute;
+            top: 40px;      /* directly under button */
+            left: 0;
             width: 280px;
             max-height: 70vh;
             overflow-y: auto;
+        
             background: rgba(255,255,255,0.98);
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 10px;
+        
             display: none;
             z-index: 200;
         }
@@ -224,7 +232,12 @@
     </div>
 
     <div class="top-buttons">
-        <button onclick="toggleChapterList()">📖 Chapters</button>
+        <!-- wrapper makes dropdown position relative -->
+        <div class="chapter-wrapper">
+            <button onclick="toggleChapterList()" id="chapterBtn">📖 Chapters</button>
+            <!-- dropdown -->
+            <div id="chapterPanel" class="chapter-panel"></div>
+        </div>
         <button onclick="toggleSettings()">⚙ Settings</button>
         <button onclick="toggleMode()">🌙 / ☀</button>
     </div>
