@@ -4,6 +4,9 @@
     <title>Lost World Map</title>
 
     <style>
+        /* =====================================================
+           1. BASE STYLE
+        ===================================================== */
         body {
             margin: 0;
             font-family: Georgia, serif;
@@ -11,12 +14,86 @@
             color: #111;
             line-height: 1.7;
             text-align: center;
-            padding: 40px 20px;
         }
 
+        /* =====================================================
+           2. DARK MODE
+        ===================================================== */
+        body.dark {
+            background-color: #0f0f0f;
+            color: #e6e6e6;
+        }
+
+        body.dark img {
+            border-color: #333;
+        }
+
+        body.dark .description {
+            color: #bbb;
+        }
+
+        /* =====================================================
+           3. TOP BAR (MATCH CHAPTER.HTML STYLE)
+        ===================================================== */
+        .top-bar {
+            position: sticky;
+            top: 0;
+
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+
+            padding: 10px 15px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            z-index: 50;
+        }
+
+        body.dark .top-bar {
+            background: #121212;
+            border-bottom: 1px solid #333;
+        }
+
+        /* LEFT SIDE TITLE AREA */
+        .book-info {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .book-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .book-title:hover {
+            opacity: 0.7;
+        }
+
+        .chapter-title {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* TOP RIGHT BUTTONS */
+        .top-buttons button {
+            margin-left: 10px;
+            padding: 6px 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* =====================================================
+           4. CONTENT AREA
+        ===================================================== */
         h1 {
             font-size: 48px;
-            margin-bottom: 20px;
+            margin: 40px 0 20px;
         }
 
         .map-container {
@@ -38,39 +115,42 @@
             color: #333;
         }
 
-        .back {
+        /* =====================================================
+           5. BUTTONS (MATCH CHAPTER STYLE)
+        ===================================================== */
+        .btn {
             display: inline-block;
             margin-top: 30px;
+            padding: 12px 24px;
+
+            background: #111;
+            color: #fff;
+
             text-decoration: none;
+            border-radius: 6px;
             font-weight: bold;
-            color: #0066cc;
         }
 
-        /* DARK MODE */
-        body.dark {
-            background-color: #0f0f0f;
-            color: #e6e6e6;
+        .btn:hover {
+            transform: scale(1.05);
         }
 
-        body.dark img {
-            border-color: #333;
+        body.dark .btn {
+            background: #fff;
+            color: #000;
         }
 
-        body.dark .description {
-            color: #bbb;
-        }
-
-        body.dark .back {
-            color: #9ecbff;
-        }
-
-        /* toggle button */
+        /* =====================================================
+           6. TOGGLE BUTTON
+        ===================================================== */
         .toggle {
             position: fixed;
             top: 15px;
             right: 15px;
+
             padding: 10px 15px;
             cursor: pointer;
+
             border: none;
             border-radius: 5px;
             font-weight: bold;
@@ -80,7 +160,34 @@
 
 <body>
 
+<!-- =====================================================
+     TOP BAR (MATCH CHAPTER SYSTEM)
+===================================================== -->
+<div class="top-bar">
+
+    <!-- LEFT: SITE TITLE -->
+    <div class="book-info">
+        <a class="book-title" href="/Lost-Novel/">
+            Lost: Ashes of Vengeance
+        </a>
+        <div class="chapter-title">
+            Lore Archive
+        </div>
+    </div>
+
+    <!-- RIGHT: CONTROLS -->
+    <div class="top-buttons">
+        <button onclick="toggleMode()">🌙 / ☀</button>
+    </div>
+
+</div>
+
+<!-- DARK MODE TOGGLE (optional floating button) -->
 <button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
+
+<!-- =====================================================
+     PAGE CONTENT
+===================================================== -->
 
 <h1>Lost World Map</h1>
 
@@ -89,11 +196,17 @@
 </div>
 
 <div class="description">
-    This map represents the known world after the collapse of civilization. 
+    This map represents the known world after the collapse of civilization.
 </div>
 
-<a class="back" href="/Lost-Novel/">← Back to Home</a>
+<!-- HOME BUTTON (MATCH CHAPTER STYLE) -->
+<a class="btn" href="/Lost-Novel/">
+    ← Back to Home
+</a>
 
+<!-- =====================================================
+     DARK MODE SCRIPT
+===================================================== -->
 <script>
 if (localStorage.getItem("mode") === "dark") {
     document.body.classList.add("dark");
