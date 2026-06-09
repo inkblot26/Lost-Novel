@@ -189,17 +189,8 @@
     
     <div class="section">
         <h2>Chapter List</h2>
-        <ul>
-            <li><a href="chapter.html?file=book1/ch001.txt">Chapter 1: Town of Tala</a></li>
-            <li><a href="chapter.html?file=book1/ch002.txt">Chapter 2: Rare Echo</a></li>
-            <li><a href="chapter.html?file=book1/ch003.txt">Chapter 3: Lines on Parchment</a></li>
-            <li><a href="chapter.html?file=book1/ch004.txt">Chapter 4: A Twist of Luck</a></li>
-            <li><a href="chapter.html?file=book1/ch005.txt">Chapter 5: The Burden of the Blade</a></li>
-            <li><a href="chapter.html?file=book1/ch006.txt">Chapter 6: Balance Broken</a></li>
-            <li><a href="chapter.html?file=book1/ch007.txt">Chapter 7: Just a second</a></li>
-            <li><a href="chapter.html?file=book1/ch008.txt">Chapter 8: What Cannot Be Held</a></li>
-            <li><a href="chapter.html?file=book1/ch009.txt">Chapter 9: In That One Moment</a></li>
-            <li><a href="chapter.html?file=book1/ch010.txt">Chapter 10: In the Ashes' Wake</a></li>
+        <ul id="chapterList">
+            <li>Loading chapters...</li>
         </ul>
     </div>
 
@@ -264,6 +255,41 @@
     updateButton();
 </script>
 
+/* =========================
+   LOAD CHAPTER LIST FROM TXT
+========================= */
+
+<script>
+    fetch("/Lost-Novel/book1/chaplist.txt")
+        .then(res => res.text())
+        .then(text => {
+    
+            const list = document.getElementById("chapterList");
+            list.innerHTML = ""; // clear loading text
+    
+            const lines = text.trim().split("\n");
+    
+            lines.forEach(line => {
+    
+                const [file, title] = line.split("|");
+    
+                const li = document.createElement("li");
+    
+                const a = document.createElement("a");
+    
+                a.href = "chapter.html?file=book1/" + file.trim();
+                a.textContent = title.trim();
+    
+                li.appendChild(a);
+                list.appendChild(li);
+            });
+    
+        })
+        .catch(err => {
+            document.getElementById("chapterList").innerHTML =
+                "<li>Failed to load chapter list</li>";
+        });
+</script>
     
 </body>
 </html>
