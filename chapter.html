@@ -3,11 +3,11 @@
 <head>
     <title>Chapter Reader</title>
 
-    <!-- =====================================================
-         1. BASE + LAYOUT STYLES
-         Controls general look of the reader
-    ===================================================== -->
     <style>
+        /* =====================================================
+           1. BASE PAGE STYLE
+           Global defaults for body and typography
+        ===================================================== */
         body {
             margin: 0;
             background-color: #ffffff;
@@ -15,19 +15,34 @@
             font-family: Georgia, serif;
         }
 
-        /* =========================
-           TOP BAR (HEADER)
-           Shows book title + chapter title + buttons
-        ========================= */
+        /* =====================================================
+           2. DARK MODE GLOBAL STYLE
+           Applied when body has "dark" class
+        ===================================================== */
+        body.dark {
+            background-color: #0f0f0f;
+            color: #e6e6e6;
+        }
+
+        body.dark h1 {
+            color: #fff;
+        }
+
+        /* =====================================================
+           3. TOP BAR (HEADER)
+           Contains book title + chapter title + buttons
+        ===================================================== */
         .top-bar {
             position: sticky;
             top: 0;
             background: #ffffff;
             border-bottom: 1px solid #ddd;
             padding: 10px 15px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             z-index: 50;
         }
 
@@ -36,6 +51,7 @@
             border-bottom: 1px solid #333;
         }
 
+        /* Left side book info */
         .book-info {
             display: flex;
             flex-direction: column;
@@ -57,7 +73,7 @@
             opacity: 0.7;
         }
 
-        /* Top buttons (settings, chapters, mode) */
+        /* Buttons in top bar */
         .top-buttons button {
             margin-left: 10px;
             padding: 6px 10px;
@@ -66,13 +82,15 @@
             border-radius: 5px;
         }
 
-        /* =========================
-           MAIN READER AREA
-        ========================= */
+        /* =====================================================
+           4. MAIN READER AREA
+           Where chapter text is displayed
+        ===================================================== */
         .content {
             max-width: 800px;
             margin: 0 auto;
             padding: 30px 20px;
+
             font-size: 24px;
             line-height: 1.8;
         }
@@ -81,18 +99,20 @@
             white-space: pre-wrap;
             text-align: justify;
 
-            /* Disable selection (optional reading experience choice) */
+            /* Disable text selection */
             user-select: none;
             cursor: default;
         }
 
-        /* =========================
-           NAVIGATION BUTTONS
-        ========================= */
+        /* =====================================================
+           5. NAVIGATION SECTION
+           Previous / Home / Next links
+        ===================================================== */
         .nav {
             margin-top: 50px;
             padding-top: 20px;
             border-top: 1px solid #ccc;
+
             display: flex;
             justify-content: center;
             gap: 40px;
@@ -101,37 +121,30 @@
         .nav a {
             text-decoration: none;
             color: #111;
+            font-weight: normal;
         }
 
         body.dark .nav a {
             color: #e6e6e6;
         }
 
-        /* =========================
-           DARK MODE GLOBAL STYLE
-        ========================= */
-        body.dark {
-            background-color: #0f0f0f;
-            color: #e6e6e6;
-        }
-
-        body.dark h1 {
-            color: #fff;
-        }
-
-        /* =========================
-           SETTINGS PANEL
-        ========================= */
+        /* =====================================================
+           6. SETTINGS PANEL (HIDDEN BY DEFAULT)
+           Font size, font type, spacing, width
+        ===================================================== */
         .reader-settings {
             position: fixed;
             top: 60px;
             right: 15px;
+
             background: rgba(255,255,255,0.95);
             padding: 10px;
             border-radius: 8px;
+
             display: none;
             flex-direction: column;
             gap: 8px;
+
             font-size: 14px;
             z-index: 100;
         }
@@ -140,9 +153,16 @@
             background: rgba(30,30,30,0.95);
         }
 
-        /* =========================
-           CHAPTER DROPDOWN PANEL
-        ========================= */
+        .reader-settings h3 {
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* =====================================================
+           7. CHAPTER DROPDOWN PANEL
+           Chapter list inside top bar button
+        ===================================================== */
         .chapter-wrapper {
             position: relative;
             display: inline-block;
@@ -152,6 +172,7 @@
             position: absolute;
             top: 40px;
             left: 0;
+
             width: 280px;
             max-height: 70vh;
             overflow-y: auto;
@@ -159,9 +180,10 @@
             background: rgba(255,255,255,0.98);
             border: 1px solid #ddd;
             border-radius: 8px;
-            padding: 10px;
 
+            padding: 10px;
             display: none;
+
             z-index: 200;
         }
 
@@ -173,17 +195,18 @@
         .chapter-panel a {
             display: block;
             padding: 6px 8px;
+
             text-decoration: none;
             color: #111;
             border-radius: 5px;
         }
 
-        .chapter-panel a:hover {
-            background: rgba(0,0,0,0.05);
-        }
-
         body.dark .chapter-panel a {
             color: #e6e6e6;
+        }
+
+        .chapter-panel a:hover {
+            background: rgba(0,0,0,0.05);
         }
 
         body.dark .chapter-panel a:hover {
@@ -195,98 +218,104 @@
 <body>
 
 <!-- =====================================================
-     2. TOP BAR UI (BOOK INFO + CONTROLS)
+     TOP BAR (VISIBLE HEADER)
 ===================================================== -->
 <div class="top-bar">
 
-    <!-- Book + Chapter Title -->
+    <!-- Book info -->
     <div class="book-info">
         <a href="/Lost-Novel/" class="book-title">
             Lost: Ashes of Vengeance
         </a>
-        <div id="topChapterTitle" class="chapter-title">
+        <div class="chapter-title" id="topChapterTitle">
             Loading...
         </div>
     </div>
 
-    <!-- Buttons (chapters, settings, mode) -->
+    <!-- Buttons -->
     <div class="top-buttons">
 
-        <!-- Chapter Dropdown -->
+        <!-- Chapter dropdown -->
         <div class="chapter-wrapper">
-            <button onclick="toggleChapterList()">📖 Chapters</button>
+            <button onclick="toggleChapterList()" id="chapterBtn">
+                📖 Chapters
+            </button>
             <div id="chapterPanel" class="chapter-panel"></div>
         </div>
 
         <button onclick="toggleSettings()">⚙ Settings</button>
         <button onclick="toggleMode()">🌙 / ☀</button>
-
     </div>
 </div>
 
 <!-- =====================================================
-     3. SETTINGS PANEL (FONT / SIZE / WIDTH)
+     SETTINGS PANEL (FONT / SIZE / WIDTH CONTROLS)
 ===================================================== -->
 <div class="reader-settings" id="settingsPanel">
 
     <h3>Reader Settings</h3>
 
     <label>Font Size:</label>
-    <select onchange="changeFontSize()" id="fontSize">
-        <option value="20px">Small</option>
-        <option value="24px" selected>Default</option>
+    <select id="fontSize" onchange="changeFontSize()">
+        <option value="20px">Extra Small</option>
+        <option value="24px" selected>Small</option>
+        <option value="28px">Medium</option>
         <option value="32px">Large</option>
+        <option value="36px">Extra Large</option>
     </select>
 
     <label>Font:</label>
-    <select onchange="changeFontFamily()" id="fontFamily">
+    <select id="fontFamily" onchange="changeFontFamily()">
         <option value="Georgia">Georgia</option>
+        <option value="'Times New Roman'">Times New Roman</option>
         <option value="Arial">Arial</option>
         <option value="Verdana">Verdana</option>
     </select>
 
     <label>Line Height:</label>
-    <select onchange="changeLineHeight()" id="lineHeight">
+    <select id="lineHeight" onchange="changeLineHeight()">
         <option value="1.5">Compact</option>
         <option value="1.8" selected>Normal</option>
-        <option value="2.2">Relaxed</option>
+        <option value="2.1">Relaxed</option>
+        <option value="2.4">Spacious</option>
     </select>
 
-    <label>Width:</label>
-    <select onchange="changeReadingWidth()" id="readingWidth">
+    <label>Reading Width:</label>
+    <select id="readingWidth" onchange="changeReadingWidth()">
         <option value="600px">Narrow</option>
         <option value="800px" selected>Normal</option>
-        <option value="95%">Wide</option>
+        <option value="1000px">Wide</option>
+        <option value="95%">Full Screen</option>
     </select>
-
 </div>
 
 <!-- =====================================================
-     4. MAIN CHAPTER DISPLAY AREA
+     MAIN READER CONTENT
 ===================================================== -->
 <div class="content" id="reader">
 
-    <div id="chapterTitle">Loading...</div>
+    <div id="chapterTitle" style="text-align:center; margin-bottom:30px;">
+        Loading...
+    </div>
 
-    <div id="chapterText" class="chapter">
+    <div class="chapter" id="chapterText">
         Loading chapter...
     </div>
 
-    <!-- Navigation (updated by JS) -->
     <div class="nav">
         <a href="#">← Previous</a>
         <a href="/Lost-Novel/">Home</a>
         <a href="#">Next →</a>
     </div>
-
 </div>
 
 <!-- =====================================================
-     5. UI CONTROLS (MODE + SETTINGS TOGGLE)
+     MODE + SETTINGS TOGGLES
 ===================================================== -->
 <script>
 function toggleMode() {
     document.body.classList.toggle("dark");
+
     localStorage.setItem(
         "mode",
         document.body.classList.contains("dark") ? "dark" : "light"
@@ -300,7 +329,7 @@ function toggleSettings() {
 </script>
 
 <!-- =====================================================
-     6. SETTINGS SYSTEM (SAVE USER PREFERENCES)
+     SETTINGS LOGIC (APPLY USER PREFERENCES)
 ===================================================== -->
 <script>
 function changeFontSize() {
@@ -329,7 +358,7 @@ function changeReadingWidth() {
 </script>
 
 <!-- =====================================================
-     7. LOAD SAVED SETTINGS ON PAGE LOAD
+     LOAD SAVED SETTINGS ON PAGE OPEN
 ===================================================== -->
 <script>
 window.onload = function () {
@@ -353,19 +382,17 @@ window.onload = function () {
 </script>
 
 <!-- =====================================================
-     8. CHAPTER LOADER + NAVIGATION SYSTEM
+     CHAPTER LOADING + NAVIGATION SYSTEM
 ===================================================== -->
 <script>
 const params = new URLSearchParams(window.location.search);
 const file = params.get("file") || "/Lost-Novel/book1/ch001.txt";
 
-/* Get chapter number from filename */
 function getChapterNumber(file) {
     const match = file.match(/ch(\d+)\.txt/);
     return match ? parseInt(match[1]) : 1;
 }
 
-/* Build next/prev filename */
 function buildChapterFile(num) {
     return `/Lost-Novel/book1/ch${String(num).padStart(3, "0")}.txt`;
 }
@@ -381,12 +408,23 @@ fetch(file)
 
         const lines = text.split("\n");
 
-        const title = lines[0] || "Unknown Chapter";
+        const title = lines[0]?.trim() || "Unknown Chapter";
 
         document.getElementById("topChapterTitle").innerText = title;
         document.getElementById("chapterTitle").innerText = title;
+
         document.getElementById("chapterText").innerText =
             lines.slice(1).join("\n");
+
+        localStorage.setItem("lastChapter", window.location.href);
+
+        const savedScroll = localStorage.getItem("scroll_" + file);
+
+        if (savedScroll) {
+            setTimeout(() => {
+                window.scrollTo(0, parseInt(savedScroll));
+            }, 100);
+        }
 
         const current = getChapterNumber(file);
         prev = current > 1 ? buildChapterFile(current - 1) : null;
@@ -397,11 +435,28 @@ fetch(file)
             <a href="/Lost-Novel/">Home</a>
             <a href="?file=${next}">Next →</a>
         `;
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft" && prev) {
+                window.location.href = "?file=" + prev;
+            }
+            if (e.key === "ArrowRight" && next) {
+                window.location.href = "?file=" + next;
+            }
+        });
+    })
+    .catch(() => {
+        document.getElementById("chapterText").innerText =
+            "Failed to load chapter file.";
     });
+
+window.addEventListener("scroll", () => {
+    localStorage.setItem("scroll_" + file, window.scrollY);
+});
 </script>
 
 <!-- =====================================================
-     9. CHAPTER LIST DROPDOWN LOADER
+     CHAPTER LIST DROPDOWN LOADER
 ===================================================== -->
 <script>
 function toggleChapterList() {
@@ -419,6 +474,7 @@ function loadChapterList() {
     fetch("/Lost-Novel/book1/chaplist.txt")
         .then(res => res.text())
         .then(text => {
+
             const lines = text.trim().split("\n");
 
             let html = "";
