@@ -3,8 +3,13 @@
 <head>
     <title>Lost: Ashes of Vengeance</title>
 
+    <!-- =====================================================
+         1. GLOBAL STYLES (LAYOUT + THEME)
+         This controls the entire look of the website
+    ===================================================== -->
     <style>
-        /* ===== BASE ===== */
+
+        /* ================= BASE PAGE STYLE ================= */
         body {
             margin: 0;
             font-family: Georgia, serif;
@@ -14,8 +19,8 @@
             transition: 0.3s ease;
             overflow-x: hidden;
         }
-        
-        /* ===== CINEMATIC BACKGROUND ===== */
+
+        /* ================= BACKGROUND EFFECT ================= */
         .bg {
             position: fixed;
             top: 0;
@@ -26,27 +31,27 @@
             z-index: -1;
             animation: slowFade 10s infinite alternate;
         }
-        
+
         @keyframes slowFade {
             0% { filter: brightness(1); }
             100% { filter: brightness(1.1); }
         }
-        
-        /* ===== CONTAINER ===== */
+
+        /* ================= MAIN CONTAINER ================= */
         .container {
             max-width: 850px;
             margin: auto;
             padding: 60px 20px;
         }
-        
-        /* ===== TITLE BLOCK ===== */
+
+        /* ================= TITLE SECTION ================= */
         .title-block {
             text-align: center;
             margin-top: 40px;
             margin-bottom: 10px;
             animation: fadeIn 1.5s ease-in-out;
         }
-        
+
         .title-block h1 {
             font-size: clamp(34px, 5vw, 64px);
             letter-spacing: 2px;
@@ -54,15 +59,15 @@
             margin-bottom: 5px;
             animation: slideUp 1.2s ease;
         }
-        
+
         .author {
             font-size: 16px;
             margin: 0;
             color: #666;
             font-style: italic;
         }
-        
-        /* ===== BUTTON ===== */
+
+        /* ================= START / CONTINUE BUTTON ================= */
         .btn {
             display: block;
             width: fit-content;
@@ -75,57 +80,57 @@
             font-weight: bold;
             transition: 0.3s;
         }
-        
+
         .btn:hover {
             transform: scale(1.05);
         }
-        
-        /* ===== SECTIONS ===== */
+
+        /* ================= SECTION SPACING ================= */
         .section {
             margin-top: 60px;
             animation: fadeIn 1.5s ease-in-out;
         }
-        
-        /* ===== LINKS ===== */
+
+        /* ================= LINKS ================= */
         a {
             color: #0066cc;
         }
-        
-        /* ===== ANIMATIONS ===== */
+
+        /* ================= ANIMATIONS ================= */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
+
         @keyframes slideUp {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-        
-        /* ===== DARK MODE ===== */
+
+        /* ================= DARK MODE ================= */
         body.dark {
             background-color: #0f0f0f;
             color: #e6e6e6;
         }
-        
+
         body.dark .bg {
             background: radial-gradient(circle at top, #1a1a1a, #000);
         }
-        
+
         body.dark .author {
             color: #aaa;
         }
-        
+
         body.dark .btn {
             background: #ffffff;
             color: #000;
         }
-        
+
         body.dark a {
             color: #9ecbff;
         }
-        
-        /* ===== TOGGLE BUTTON ===== */
+
+        /* ================= DARK MODE BUTTON ================= */
         .toggle {
             position: fixed;
             top: 15px;
@@ -138,82 +143,63 @@
             z-index: 10;
         }
 
-        /* ===== CHAPTER GRID ===== */
+        /* ================= CHAPTER GRID ================= */
         #chapterList {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* 2 columns */
+            grid-template-columns: 1fr 1fr;
             gap: 10px 40px;
             margin-top: 20px;
         }
-        
-        /* chapter links styling */
+
         .chapter-item a {
             text-decoration: none;
             color: #111;
             display: block;
             padding: 5px 0;
         }
-        
+
         body.dark .chapter-item a {
             color: #e6e6e6;
         }
-        
+
     </style>
 </head>
 
 <body>
 
-<!-- create a box with bg label -->    
+<!-- =====================================================
+     2. BACKGROUND + UI BUTTONS
+===================================================== -->
+
 <div class="bg"></div>
-    
-<!-- Dark/Light Toggle Button -->
+
 <button class="toggle" onclick="toggleMode()">🌙 / ☀</button>
-    
+
 <div class="container">
 
+    <!-- ================= TITLE ================= -->
     <div class="title-block">
         <h1>Lost: Ashes of Vengeance</h1>
         <p class="author">by Inkblot</p>
     </div>
 
+    <!-- ================= CONTINUE / START BUTTON ================= -->
     <a class="btn" href="#" id="mainButton" onclick="openChapter(event)">
         Loading...
     </a>
 
-    
+    <!-- ================= PROLOGUE ================= -->
     <div class="section">
         <h2>Prologue</h2>
-        <p>
-            In the age of the Galactic Awakening, humanity reached beyond the stars. Hopeful and curious, they
-        encountered the Chaturi, a solitary traveler of boundless intellect and mystery, unlike anything ever known
-        in a vessel called Oumuamua. Its arrival on Earth brought awe and unity. For a time, there was peace.
-        Knowledge flowed freely, and wonder bloomed. 
-        </p>
-        <p>
-            But peace is fragile. As fear and ambition took root, nations turned on one another, each seeking to control
-        the Chaturi. Diplomacy gave way to deception. War followed. Disillusioned by humanity’s hunger for
-        power, the Chaturi vanished without a trace or a word. Some say it left in disappointment. Others believe it
-        glimpsed something beyond human understanding.
-        </p>
-        <p>
-            Then the world convulsed. Monstrous beasts roamed the land. Storms poisoned the skies. Oceans
-        swallowed continents. Forests reclaimed cities. Technology, from satellites to weapons to digital memory,
-        ceased to function, wiped away by forces unknown. Civilization crumbled. Billions perished.
-        And yet, in the ruins, survivors awakened to something new, or perhaps something ancient — Verdant
-        Echoes, a power drawn not from machines, but from life itself.
-        </p>
-        <p>
-        Centuries have passed. Now begins the Verdant Age.
-        </p>
+        <p>...</p>
     </div>
 
-    
+    <!-- ================= CHAPTER LIST ================= -->
     <div class="section">
         <h2>Chapter List</h2>
-        <!-- Chapter buttons will appear here -->
+
         <div id="chapterList"></div>
-    
-        <!-- Pagination buttons -->
+
         <div style="margin-top:20px; text-align:center;">
             <button onclick="prevPage()">⬅ Prev Page</button>
             <span id="pageInfo"></span>
@@ -221,9 +207,9 @@
         </div>
     </div>
 
+    <!-- ================= LORE LINKS ================= -->
     <div class="section">
-        <h2>Lore Archieve</h2>
-        <p>A collection of knowledge about the Lost World.</p>
+        <h2>Lore Archive</h2>
         <ul>
             <li><a href="/Lost-Novel/lore/worldmap.html">Lost World Map</a></li>
             <li><a href="/Lost-Novel/lore/echosystem.html">Echo System</a></li>
@@ -234,139 +220,132 @@
 
 </div>
 
+<!-- =====================================================
+     3. DARK MODE SYSTEM
+===================================================== -->
 <script>
-    // Load saved mode for light and dark reading mode
+
+    // Load saved theme
     if (localStorage.getItem("mode") === "dark") {
         document.body.classList.add("dark");
     }
 
+    // Toggle light/dark mode
     function toggleMode() {
         document.body.classList.toggle("dark");
 
-        if (document.body.classList.contains("dark")) {
-            localStorage.setItem("mode", "dark");
-        } else {
-            localStorage.setItem("mode", "light");
-        }
+        localStorage.setItem(
+            "mode",
+            document.body.classList.contains("dark") ? "dark" : "light"
+        );
     }
+
 </script>
 
+<!-- =====================================================
+     4. CONTINUE READING SYSTEM
+===================================================== -->
 <script>
-    // start or continue button
+
     const firstChapter = "/Lost-Novel/book1/ch001.html";
-    
+
+    // Updates button text depending on saved progress
     function updateButton() {
         let lastChapter = localStorage.getItem("lastChapter");
         let btn = document.getElementById("mainButton");
-    
+
         if (lastChapter) {
             btn.innerText = "Continue Reading";
         } else {
             btn.innerText = "Read Chapter 1";
         }
     }
-    
+
+    // Opens last chapter or first chapter
     function openChapter(event) {
         event.preventDefault();
-    
+
         let lastChapter = localStorage.getItem("lastChapter");
-    
-        if (lastChapter) {
-            window.location.href = lastChapter;
-        } else {
-            window.location.href = firstChapter;
-        }
+
+        window.location.href = lastChapter ? lastChapter : firstChapter;
     }
-    
-    // run on page load
+
     updateButton();
+
 </script>
-    
+
+<!-- =====================================================
+     5. LOAD CHAPTER LIST (FROM TXT FILE)
+===================================================== -->
 <script>
-    /* =========================
-     LOAD CHAPTER LIST FROM TXT
-    ========================= */
+
     let chapters = [];
     let currentPage = 0;
-    
+
     fetch("/Lost-Novel/book1/chaplist.txt")
         .then(res => res.text())
         .then(text => {
-            const list = document.getElementById("chapterList");
-            list.innerHTML = "";
-            const lines = text.trim().split("\n");
-            // convert txt ? array of objects
-            chapters = lines.map(line => {
+
+            // Convert text file → array of chapters
+            chapters = text.trim().split("\n").map(line => {
                 const [file, title] = line.split("|");
                 return {
                     file: file.trim(),
                     title: title.trim()
                 };
             });
-    
-            renderPage(); // FIRST LOAD
-        })
-        .catch(err => {
-            document.getElementById("chapterList").innerHTML =
-                "<p>Failed to load chapter list</p>";
+
+            renderPage();
         });
-    
-    /*=========================
-       RENDER GRID PAGE
-    ========================= */
+
+    // Render chapters in grid format
     function renderPage() {
+
         const list = document.getElementById("chapterList");
+
         const itemsPerPage = 20;
         const start = currentPage * itemsPerPage;
-        const end = start + itemsPerPage;
-        const pageItems = chapters.slice(start, end);
+        const pageItems = chapters.slice(start, start + itemsPerPage);
+
         const left = pageItems.slice(0, 10);
         const right = pageItems.slice(10, 20);
+
         let html = "";
+
         for (let i = 0; i < 10; i++) {
+
             html += `
                 <div class="chapter-item">
-                    ${
-                        left[i]
-                        ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${left[i].file}">
-                            ${left[i].title}
-                           </a>`
-                        : ""
-                    }
+                    ${left[i] ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${left[i].file}">${left[i].title}</a>` : ""}
                 </div>
-    
+
                 <div class="chapter-item">
-                    ${
-                        right[i]
-                        ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${right[i].file}">
-                            ${right[i].title}
-                           </a>`: ""
-                    }
-                </div>`;
+                    ${right[i] ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${right[i].file}">${right[i].title}</a>` : ""}
+                </div>
+            `;
         }
+
         list.innerHTML = html;
+
         document.getElementById("pageInfo").innerText =
             `Page ${currentPage + 1} / ${Math.ceil(chapters.length / itemsPerPage)}`;
     }
-    
-    /* =========================
-       PAGINATION
-    ========================= */
+
     function nextPage() {
-        const max = Math.ceil(chapters.length / 20);
-        if (currentPage < max - 1) {
+        if (currentPage < Math.ceil(chapters.length / 20) - 1) {
             currentPage++;
             renderPage();
         }
     }
-    
+
     function prevPage() {
         if (currentPage > 0) {
             currentPage--;
             renderPage();
         }
     }
+
 </script>
-    
+
 </body>
 </html>
