@@ -3,23 +3,24 @@
 <head>
     <title>Chapter Reader</title>
 
+    <!-- =====================================================
+         1. BASE + LAYOUT STYLES
+         Controls general look of the reader
+    ===================================================== -->
     <style>
-        /* =====================================================
-           BASE PAGE STYLE
-           This controls default look of the whole reader
-        ===================================================== */
         body {
-            margin: 0; /* remove default browser spacing */
+            margin: 0;
             background-color: #ffffff;
             color: #222;
             font-family: Georgia, serif;
         }
 
-        /* =====================================================
-           TOP BAR (BOOK TITLE + CHAPTER TITLE)
-        ===================================================== */
+        /* =========================
+           TOP BAR (HEADER)
+           Shows book title + chapter title + buttons
+        ========================= */
         .top-bar {
-            position: sticky; /* stays at top when scrolling */
+            position: sticky;
             top: 0;
             background: #ffffff;
             border-bottom: 1px solid #ddd;
@@ -27,16 +28,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 50; /* keeps it above content */
+            z-index: 50;
         }
 
-        /* Dark mode version of top bar */
         body.dark .top-bar {
             background: #121212;
             border-bottom: 1px solid #333;
         }
 
-        /* Book info container (left side of top bar) */
         .book-info {
             display: flex;
             flex-direction: column;
@@ -45,6 +44,12 @@
         .book-title {
             font-weight: bold;
             font-size: 14px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .book-title:hover {
+            opacity: 0.7;
         }
 
         .chapter-title {
@@ -52,7 +57,7 @@
             opacity: 0.7;
         }
 
-        /* Buttons on top bar (settings + dark mode) */
+        /* Top buttons (settings, chapters, mode) */
         .top-buttons button {
             margin-left: 10px;
             padding: 6px 10px;
@@ -61,27 +66,29 @@
             border-radius: 5px;
         }
 
-        /* =====================================================
-           MAIN READER CONTENT AREA
-           This is where chapter text is displayed
-        ===================================================== */
+        /* =========================
+           MAIN READER AREA
+        ========================= */
         .content {
             max-width: 800px;
-            margin: 0 auto; /* center horizontally */
+            margin: 0 auto;
             padding: 30px 20px;
             font-size: 24px;
             line-height: 1.8;
         }
 
-        /* Chapter text formatting */
         .chapter {
-            white-space: pre-wrap; /* keeps line breaks from file */
+            white-space: pre-wrap;
             text-align: justify;
+
+            /* Disable selection (optional reading experience choice) */
+            user-select: none;
+            cursor: default;
         }
 
-        /* =====================================================
-           NAVIGATION (PREV / HOME / NEXT)
-        ===================================================== */
+        /* =========================
+           NAVIGATION BUTTONS
+        ========================= */
         .nav {
             margin-top: 50px;
             padding-top: 20px;
@@ -91,22 +98,18 @@
             gap: 40px;
         }
 
-        /* Link styling (LIGHT MODE) */
         .nav a {
             text-decoration: none;
-            font-weight: normal;
-            color: #111; /* black text instead of blue */
+            color: #111;
         }
 
-        /* Link styling (DARK MODE) */
         body.dark .nav a {
-            color: #e6e6e6; /* light text in dark mode */
-            font-weight: normal;
+            color: #e6e6e6;
         }
 
-        /* =====================================================
-           DARK MODE GLOBAL STYLES
-        ===================================================== */
+        /* =========================
+           DARK MODE GLOBAL STYLE
+        ========================= */
         body.dark {
             background-color: #0f0f0f;
             color: #e6e6e6;
@@ -116,9 +119,9 @@
             color: #fff;
         }
 
-        /* =====================================================
-           SETTINGS PANEL (FONT SIZE, FONT, ETC.)
-        ===================================================== */
+        /* =========================
+           SETTINGS PANEL
+        ========================= */
         .reader-settings {
             position: fixed;
             top: 60px;
@@ -133,50 +136,40 @@
             z-index: 100;
         }
 
-        /* Dark mode version of settings panel */
         body.dark .reader-settings {
             background: rgba(30,30,30,0.95);
-        }
-
-        .reader-settings h3 {
-            margin: 0;
-            text-align: center;
-            font-size: 14px;
         }
 
         /* =========================
            CHAPTER DROPDOWN PANEL
         ========================= */
         .chapter-wrapper {
-            position: relative; /* IMPORTANT: anchor for dropdown */
+            position: relative;
             display: inline-block;
         }
-        
-        /* dropdown */
+
         .chapter-panel {
             position: absolute;
-            top: 40px;      /* directly under button */
+            top: 40px;
             left: 0;
             width: 280px;
             max-height: 70vh;
             overflow-y: auto;
-        
+
             background: rgba(255,255,255,0.98);
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 10px;
-        
+
             display: none;
             z-index: 200;
         }
-        
-        /* dark mode */
+
         body.dark .chapter-panel {
             background: rgba(30,30,30,0.98);
             border: 1px solid #333;
         }
-        
-        /* chapter links */
+
         .chapter-panel a {
             display: block;
             padding: 6px 8px;
@@ -184,151 +177,116 @@
             color: #111;
             border-radius: 5px;
         }
-        
+
         .chapter-panel a:hover {
             background: rgba(0,0,0,0.05);
         }
-        
-        /* dark mode links */
+
         body.dark .chapter-panel a {
             color: #e6e6e6;
         }
-        
+
         body.dark .chapter-panel a:hover {
             background: rgba(255,255,255,0.08);
         }
-
-        .book-title {
-            font-weight: bold;
-            font-size: 14px;
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        .book-title:hover {
-            opacity: 0.7;
-        }
-        
-         /* =====================================================
-           DISABLE CHAPTER TEXT SELECTION
-        ===================================================== */
-        .chapter {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            cursor: default;    /*remove I-beam cursor*/
-        }
-        
     </style>
 </head>
 
 <body>
 
 <!-- =====================================================
-     TOP BAR (VISIBLE HEADER)
-     Shows:
-     - Book title (static)
-     - Chapter title (dynamic from file)
+     2. TOP BAR UI (BOOK INFO + CONTROLS)
 ===================================================== -->
 <div class="top-bar">
+
+    <!-- Book + Chapter Title -->
     <div class="book-info">
-        <a href="/Lost-Novel/" class="book-title">Lost: Ashes of Vengeance</a>
-        <!-- This is updated using JavaScript -->
-        <div class="chapter-title" id="topChapterTitle">
+        <a href="/Lost-Novel/" class="book-title">
+            Lost: Ashes of Vengeance
+        </a>
+        <div id="topChapterTitle" class="chapter-title">
             Loading...
         </div>
     </div>
 
+    <!-- Buttons (chapters, settings, mode) -->
     <div class="top-buttons">
-        <!-- wrapper makes dropdown position relative -->
+
+        <!-- Chapter Dropdown -->
         <div class="chapter-wrapper">
-            <button onclick="toggleChapterList()" id="chapterBtn">📖 Chapters</button>
-            <!-- dropdown -->
+            <button onclick="toggleChapterList()">📖 Chapters</button>
             <div id="chapterPanel" class="chapter-panel"></div>
         </div>
+
         <button onclick="toggleSettings()">⚙ Settings</button>
         <button onclick="toggleMode()">🌙 / ☀</button>
+
     </div>
 </div>
 
 <!-- =====================================================
-     SETTINGS PANEL (HIDDEN BY DEFAULT)
-     Lets user change reading appearance
+     3. SETTINGS PANEL (FONT / SIZE / WIDTH)
 ===================================================== -->
 <div class="reader-settings" id="settingsPanel">
+
     <h3>Reader Settings</h3>
 
-    <!-- Font size selector -->
     <label>Font Size:</label>
-    <select id="fontSize" onchange="changeFontSize()">
-        <option value="20px">Extra Small</option>
-        <option value="24px" selected>Small</option>
-        <option value="28px">Medium</option>
+    <select onchange="changeFontSize()" id="fontSize">
+        <option value="20px">Small</option>
+        <option value="24px" selected>Default</option>
         <option value="32px">Large</option>
-        <option value="36px">Extra Large</option>
     </select>
 
-    <!-- Font type selector -->
     <label>Font:</label>
-    <select id="fontFamily" onchange="changeFontFamily()">
+    <select onchange="changeFontFamily()" id="fontFamily">
         <option value="Georgia">Georgia</option>
-        <option value="'Times New Roman'">Times New Roman</option>
         <option value="Arial">Arial</option>
         <option value="Verdana">Verdana</option>
     </select>
 
-    <!-- Line spacing -->
     <label>Line Height:</label>
-    <select id="lineHeight" onchange="changeLineHeight()">
+    <select onchange="changeLineHeight()" id="lineHeight">
         <option value="1.5">Compact</option>
         <option value="1.8" selected>Normal</option>
-        <option value="2.1">Relaxed</option>
-        <option value="2.4">Spacious</option>
+        <option value="2.2">Relaxed</option>
     </select>
 
-    <!-- Reading width -->
-    <label>Reading Width:</label>
-    <select id="readingWidth" onchange="changeReadingWidth()">
+    <label>Width:</label>
+    <select onchange="changeReadingWidth()" id="readingWidth">
         <option value="600px">Narrow</option>
         <option value="800px" selected>Normal</option>
-        <option value="1000px">Wide</option>
-        <option value="95%">Full Screen</option>
+        <option value="95%">Wide</option>
     </select>
+
 </div>
 
 <!-- =====================================================
-     CHAPTER DISPLAY AREA
+     4. MAIN CHAPTER DISPLAY AREA
 ===================================================== -->
 <div class="content" id="reader">
 
-    <!-- Center chapter title -->
-    <div id="chapterTitle" style="text-align:center; margin-bottom:30px;">
-        Loading...
-    </div>
+    <div id="chapterTitle">Loading...</div>
 
-    <!-- Chapter text goes here -->
-    <div class="chapter" id="chapterText">
+    <div id="chapterText" class="chapter">
         Loading chapter...
     </div>
 
-    <!-- Navigation buttons -->
+    <!-- Navigation (updated by JS) -->
     <div class="nav">
         <a href="#">← Previous</a>
         <a href="/Lost-Novel/">Home</a>
         <a href="#">Next →</a>
     </div>
+
 </div>
 
 <!-- =====================================================
-     MODE + SETTINGS TOGGLES
+     5. UI CONTROLS (MODE + SETTINGS TOGGLE)
 ===================================================== -->
 <script>
 function toggleMode() {
-    // Switch dark/light mode
     document.body.classList.toggle("dark");
-
-    // Save user preference in browser storage
     localStorage.setItem(
         "mode",
         document.body.classList.contains("dark") ? "dark" : "light"
@@ -336,14 +294,13 @@ function toggleMode() {
 }
 
 function toggleSettings() {
-    // Show or hide settings panel
     const panel = document.getElementById("settingsPanel");
     panel.style.display = panel.style.display === "flex" ? "none" : "flex";
 }
 </script>
 
 <!-- =====================================================
-     SETTINGS FUNCTIONS (APPLY USER PREFERENCES)
+     6. SETTINGS SYSTEM (SAVE USER PREFERENCES)
 ===================================================== -->
 <script>
 function changeFontSize() {
@@ -372,183 +329,113 @@ function changeReadingWidth() {
 </script>
 
 <!-- =====================================================
-     LOAD SAVED SETTINGS WHEN PAGE OPENS
+     7. LOAD SAVED SETTINGS ON PAGE LOAD
 ===================================================== -->
 <script>
 window.onload = function () {
 
-    // restore dark mode
     if (localStorage.getItem("mode") === "dark") {
         document.body.classList.add("dark");
     }
 
-    // restore font size
     const fs = localStorage.getItem("fontSize");
     if (fs) document.getElementById("reader").style.fontSize = fs;
 
-    // restore font family
     const ff = localStorage.getItem("fontFamily");
     if (ff) document.getElementById("reader").style.fontFamily = ff;
 
-    // restore line height
     const lh = localStorage.getItem("lineHeight");
     if (lh) document.getElementById("reader").style.lineHeight = lh;
 
-    // restore reading width
     const rw = localStorage.getItem("readingWidth");
     if (rw) document.getElementById("reader").style.maxWidth = rw;
 };
 </script>
 
 <!-- =====================================================
-     LOAD CHAPTER FILE + NAVIGATION SYSTEM
+     8. CHAPTER LOADER + NAVIGATION SYSTEM
 ===================================================== -->
 <script>
-// Get file name from URL (?file=ch001.txt)
 const params = new URLSearchParams(window.location.search);
 const file = params.get("file") || "/Lost-Novel/book1/ch001.txt";
 
-/* ---- extract chapter number from filename ---- */
+/* Get chapter number from filename */
 function getChapterNumber(file) {
     const match = file.match(/ch(\d+)\.txt/);
     return match ? parseInt(match[1]) : 1;
 }
 
-/* ---- build filename from number ---- */
+/* Build next/prev filename */
 function buildChapterFile(num) {
     return `/Lost-Novel/book1/ch${String(num).padStart(3, "0")}.txt`;
 }
 
-/* =========================
-   GLOBAL CHAPTER LINKS
-========================= */
 let prev = null;
 let next = null;
-    
-/* ---- load chapter text file ---- */
+
 fetch(file)
     .then(res => res.text())
     .then(text => {
+
         localStorage.setItem("lastChapter", window.location.href);
+
         const lines = text.split("\n");
 
-        // FIRST LINE = chapter title
-        const title = lines[0]?.trim() || "Unknown Chapter";
+        const title = lines[0] || "Unknown Chapter";
 
-        // update top bar title
         document.getElementById("topChapterTitle").innerText = title;
-
-        // update center title
         document.getElementById("chapterTitle").innerText = title;
-
-        // rest of file = story text
         document.getElementById("chapterText").innerText =
             lines.slice(1).join("\n");
-
-        // SAVE LAST READ CHAPTER (IMPORTANT FIX)
-        localStorage.setItem("lastChapter", window.location.href);
-
-        /* =========================
-           RESTORE SAVED SCROLL POSITION
-        ========================= */
-        const savedScroll = localStorage.getItem("scroll_" + file);
-        
-        if (savedScroll) {
-            setTimeout(() => {
-                window.scrollTo(0, parseInt(savedScroll));
-            }, 100);
-        }
-
-        
-        /* ---- navigation logic ---- */
 
         const current = getChapterNumber(file);
         prev = current > 1 ? buildChapterFile(current - 1) : null;
         next = buildChapterFile(current + 1);
 
-        // replace navigation buttons dynamically
         document.querySelector(".nav").innerHTML = `
             <a href="?file=${prev}">← Previous</a>
             <a href="/Lost-Novel/">Home</a>
             <a href="?file=${next}">Next →</a>
         `;
-
-        /* =========================
-           KEYBOARD NAVIGATION
-        ========================= */
-        document.addEventListener("keydown", (e) => {
-        
-            // LEFT ARROW → Previous Chapter
-            if (e.key === "ArrowLeft" && prev) {
-                window.location.href = "?file=" + prev;
-            }
-        
-            // RIGHT ARROW → Next Chapter
-            if (e.key === "ArrowRight" && next) {
-                window.location.href = "?file=" + next;
-            }
-        
-        });
-    })
-    
-    .catch(() => {
-        document.getElementById("chapterText").innerText =
-            "Failed to load chapter file.";
     });
-    
-    // Save scroll position
-    window.addEventListener("scroll", () => {
-        localStorage.setItem(
-            "scroll_" + file,
-            window.scrollY
-        );
-    });
-
 </script>
 
+<!-- =====================================================
+     9. CHAPTER LIST DROPDOWN LOADER
+===================================================== -->
 <script>
-    let chapterPanelOpen = false;
-    /* =========================
-            TOGGLE PANEL
-    ========================= */
-    function toggleChapterList() {
-        const panel = document.getElementById("chapterPanel");
-    
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-            loadChapterList();
-        }
+function toggleChapterList() {
+    const panel = document.getElementById("chapterPanel");
+
+    if (panel.style.display === "block") {
+        panel.style.display = "none";
+    } else {
+        panel.style.display = "block";
+        loadChapterList();
     }
-    
-    /* =========================
-       LOAD chaplist.txt
-    ========================= */
-    function loadChapterList() {
-    
-        fetch("/Lost-Novel/book1/chaplist.txt")
-            .then(res => res.text())
-            .then(text => {
-    
-                const lines = text.trim().split("\n");
-    
-                let html = "";
-    
-                lines.forEach(line => {
-    
-                    const [file, title] = line.split("|");
-    
-                    html += `
-                        <a href="?file=/Lost-Novel/book1/${file.trim()}">
-                            ${title.trim()}
-                        </a>
-                    `;
-                });
-    
-                document.getElementById("chapterPanel").innerHTML = html;
+}
+
+function loadChapterList() {
+    fetch("/Lost-Novel/book1/chaplist.txt")
+        .then(res => res.text())
+        .then(text => {
+            const lines = text.trim().split("\n");
+
+            let html = "";
+
+            lines.forEach(line => {
+                const [file, title] = line.split("|");
+
+                html += `
+                    <a href="?file=/Lost-Novel/book1/${file.trim()}">
+                        ${title.trim()}
+                    </a>
+                `;
             });
-    }
+
+            document.getElementById("chapterPanel").innerHTML = html;
+        });
+}
 </script>
 
 </body>
