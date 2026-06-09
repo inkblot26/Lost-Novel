@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World Map</title>
+
+    <style>
+        /* =====================================================
+           1. BASE STYLE
+        ===================================================== */
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background-color: #f5f5f5;
+            color: #111;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* =====================================================
+           2. DARK MODE
+        ===================================================== */
+        body.dark {
+            background-color: #0f0f0f;
+            color: #e6e6e6;
+        }
+
+        body.dark img {
+            border-color: #333;
+        }
+
+        body.dark .description {
+            color: #bbb;
+        }
+
+        /* =====================================================
+           3. TOP BAR (MATCH CHAPTER.HTML STYLE)
+        ===================================================== */
+        .top-bar {
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 50;
+        }
+
+        body.dark .top-bar {
+            background: #121212;
+            border-bottom: 1px solid #333;
+        }
+
+        .book-info {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .book-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .chapter-title {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        .top-buttons button {
+            margin-left: 10px;
+            padding: 6px 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 40px 0 20px;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 40px auto 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            white-space: pre-line;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        body.dark .btn {
+            background: #fff;
+            color: #000;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .chapter-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .chapter-panel {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 240px;
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(255,255,255,0.98);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            display: none;
+            text-align: left;
+            z-index: 200;
+        }
+
+        body.dark .chapter-panel {
+            background: rgba(30,30,30,0.98);
+            border: 1px solid #333;
+        }
+
+        .chapter-panel a {
+            display: block;
+            padding: 6px 8px;
+            text-decoration: none;
+            color: #111;
+            border-radius: 5px;
+        }
+
+        body.dark .chapter-panel a {
+            color: #e6e6e6;
+        }
+
+        .chapter-panel a:hover {
+            background: rgba(0,0,0,0.05);
+        }
+
+        body.dark .chapter-panel a:hover {
+            background: rgba(255,255,255,0.08);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <div class="book-info">
+        <a class="book-title" href="/Lost-Novel/">
+            Lost: Ashes of Vengeance
+        </a>
+    </div>
+
+    <div class="top-buttons">
+
+        <div class="chapter-wrapper">
+            <button onclick="toggleLoreList()">📚 Lore</button>
+            <div id="lorePanel" class="chapter-panel"></div>
+        </div>
+
+        <button onclick="toggleMode()">🌙 / ☀</button>
+    </div>
+</div>
+
+<button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
+
+<h1>Verdant Echoes</h1>
+
+<div class="description">
+
+Verdant Echoes are physical manifestations of the Earth’s lingering will—living tomes infused with natural energy. These tomes grant abilities when absorbed, after which they crumble into dust, imprinting their power into the user’s memory.
+
+Bound in living bark and inscribed with glowing ink, Echoes appear mysteriously upon the defeat of monsters, or may occasionally be found growing within nature itself.
+
+Most individuals can absorb only two to three Echoes, depending on their physical strength and compatibility. Verdant Echoes are broadly classified into two categories: Root Echoes and Rare Echoes.
+
+
+ECHO USER RANKING SYSTEM
+
+Echo User – A basic wielder of Echo abilities.
+
+Echo Master – A highly skilled individual with refined Echo control.
+Examples: fusing Echoes with weapons, commanding Wildborn companions using Echo of Tame, or freely manipulating multiple Echo abilities.
+
+Echo Weaver – A transcendent wielder whose Echo abilities have evolved beyond conventional limits.
+Examples: fusing multiple Echoes into new forms or advanced hybrid applications.
+
+
+CLASSIFICATION OF ECHOES
+
+Humanity classifies Echoes into seven major categories:
+
+1. ELEMENTAL ECHOES
+Echoes derived from the fundamental forces of nature, governing heat, water, earth, air, lightning, and other elemental energy states.
+
+Echo of Fire – Generate and manipulate flames and heat.
+
+Echo of Water – Control water in liquid and frozen states.
+
+Echo of Earth – Control stone, soil, sand, and minerals.
+
+Echo of Wind – Control air currents and atmospheric pressure.
+
+Echo of Lightning – Control electrical currents and lightning.
+
+Echo of Metal (Rare) – Control and reshape metallic substances.
+
+Echo of Tremor (Rare) – Generate seismic vibrations and shockwaves.
+
+Echo of Magma (Rare) – Control molten rock and volcanic heat.
+
+
+2. NATURE ECHOES
+Echoes of life, growth, regeneration, and decay.
+
+Echo of Bloom – Accelerated plant growth and botanical control.
+
+Echo of Glimmer – Bioluminescent light manipulation.
+
+Echo of Heal – Accelerated biological recovery.
+
+Echo of Rot (Rare) – Rapid organic decay and decomposition.
+
+
+3. BEAST ECHOES
+Echoes of instinct, mutation, and Wildborn traits.
+
+Echo of Beast – Partial beast transformation.
+
+Echo of Pact – Creates beast-like Echo companions.
+
+Echo of Tame – Bonds with Wildborn creatures.
+
+Echo of Flesh (Rare) – Unstable biological mutation control.
+
+Echo of Metal Skin – Converts flesh into armored plating.
+
+Echo of White Wing (Rare) – Manifestation of ethereal wings.
+
+
+4. SENSES & AWARENESS ECHOES
+
+Echo of Perception – Enhanced sensory awareness.
+
+Echo of Silence – Sound suppression.
+
+Echo of Voice – Enhanced vocal control.
+
+Echo of Strength – Physical enhancement.
+
+Echo of Camouflage (Rare) – Visual concealment.
+
+
+5. MIND & SOUL ECHOES
+
+Echo of Psyche – Influence thoughts and emotions.
+
+Echo of Recall – Perfect memory retention.
+
+Echo of Fate (Passive, Rare) – Unpredictable shifts of fortune.
+
+
+6. SPACE & MOTION ECHOES
+
+Echo of Grasp – Telekinetic force.
+
+Echo of Path – Instant traversal marking.
+
+Echo of Pocket – Internal storage space.
+
+Echo of Gravity (Rare) – Gravity manipulation.
+
+
+7. KNOWLEDGE & CREATION ECHOES
+
+Echo of Shape – Material manipulation.
+
+Echo of Weapons – Energy weapon creation.
+
+Echo of Barrier – Protective constructs.
+
+Echo of Ink (Rare) – Temporary physical manifestation of symbols.
+
+Echo of Blood (Rare) – Blood manipulation.
+
+Echo of Duplicate (Rare) – Object replication.
+
+</div>
+
+<a class="btn" href="/Lost-Novel/">
+    ← Back to Home
+</a>
+
+<script>
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    function toggleMode() {
+        document.body.classList.toggle("dark");
+        localStorage.setItem("mode", document.body.classList.contains("dark") ? "dark" : "light");
+    }
+
+    function toggleLoreList() {
+        const panel = document.getElementById("lorePanel");
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+        loadLoreList();
+    }
+
+    function loadLoreList() {
+        const lore = [
+            { name: "World Map", link: "/Lost-Novel/lore/worldmap.html" },
+            { name: "Echo System", link: "/Lost-Novel/lore/echosystem.html" },
+            { name: "List of Wildborn", link: "/Lost-Novel/lore/wildborn.html" },
+            { name: "List of Primeflora", link: "/Lost-Novel/lore/primeflora.html" }
+        ];
+
+        document.getElementById("lorePanel").innerHTML =
+            lore.map(item => `<a href="${item.link}">${item.name}</a>`).join("");
+    }
+</script>
+
+</body>
+</html>
