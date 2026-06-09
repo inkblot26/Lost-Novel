@@ -137,6 +137,27 @@
             font-weight: bold;
             z-index: 10;
         }
+
+        /* ===== CHAPTER GRID ===== */
+        #chapterList {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 columns */
+            gap: 10px 40px;
+            margin-top: 20px;
+        }
+        
+        /* chapter links styling */
+        .chapter-item a {
+            text-decoration: none;
+            color: #111;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        body.dark .chapter-item a {
+            color: #e6e6e6;
+        }
+        
     </style>
 </head>
 
@@ -262,35 +283,89 @@
 </script>
     
 <script>
+    /* =========================
+     LOAD CHAPTER LIST FROM TXT
+    ========================= */
+    let chapters = [];
+    let currentPage = 0;
+    
     fetch("/Lost-Novel/book1/chaplist.txt")
         .then(res => res.text())
         .then(text => {
-    
             const list = document.getElementById("chapterList");
-            list.innerHTML = ""; // clear loading text
-    
+            list.innerHTML = "";
             const lines = text.trim().split("\n");
-    
-            lines.forEach(line => {
-    
+            // convert txt → array of objects
+            chapters = lines.map(line => {
                 const [file, title] = line.split("|");
-    
-                const li = document.createElement("li");
-    
-                const a = document.createElement("a");
-    
-                a.href = "chapter.html?file=book1/" + file.trim();
-                a.textContent = title.trim();
-    
-                li.appendChild(a);
-                list.appendChild(li);
+                return {
+                    file: file.trim(),
+                    title: title.trim()
+                };
             });
     
+            renderPage(); // FIRST LOAD
         })
         .catch(err => {
             document.getElementById("chapterList").innerHTML =
-                "<li>Failed to load chapter list</li>";
+                "<p>Failed to load chapter list</p>";
         });
+    
+    /*=========================
+       RENDER GRID PAGE
+    ========================= */
+    function renderPage() {
+        const list = document.getElementById("chapterList");
+        const itemsPerPage = 20;
+        const start = currentPage * itemsPerPage;
+        const end = start + itemsPerPage;
+        const pageItems = chapters.slice(start, end);
+        const left = pageItems.slice(0, 10);
+        const right = pageItems.slice(10, 20);
+        let html = "";
+        for (let i = 0; i < 10; i++) {
+            html += `
+                <div class="chapter-item">
+                    ${
+                        left[i]
+                        ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${left[i].file}">
+                            ${left[i].title}
+                           </a>`
+                        : ""
+                    }
+                </div>
+    
+                <div class="chapter-item">
+                    ${
+                        right[i]
+                        ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${right[i].file}">
+                            ${right[i].title}
+                           </a>`: ""
+                    }
+                </div>`;
+        }
+        list.innerHTML = html;
+        document.getElementById("pageInfo").innerText =
+            `Page ${currentPage + 1} / ${Math.ceil(chapters.length / itemsPerPage)}`;
+    }
+    
+    /* =========================
+       PAGINATION
+    ========================= */
+    function nextPage() {
+        const max = Math.ceil(chapters.length / 20);
+        if (currentPage < max - 1) {
+            currentPage++;
+            renderPage();
+        }
+    }
+    
+    function prevPage() {
+        if (currentPage > 0) {
+            currentPage--;
+            renderPage();
+        }
+    }
 </script>
     
 </body>
