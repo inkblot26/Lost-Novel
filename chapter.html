@@ -502,13 +502,11 @@ fetch(file)
     function toggleChapterList() {
         const panel = document.getElementById("chapterPanel");
     
-        chapterPanelOpen = !chapterPanelOpen;
-    
-        if (chapterPanelOpen) {
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
             panel.style.display = "block";
             loadChapterList();
-        } else {
-            panel.style.display = "none";
         }
     }
     
@@ -530,7 +528,7 @@ fetch(file)
                     const [file, title] = line.split("|");
     
                     html += `
-                        <a href="?file=/Lost-Novel/book1/${file.trim()}">
+                        <a href="?file=${file.trim()}">
                             ${title.trim()}
                         </a>
                     `;
