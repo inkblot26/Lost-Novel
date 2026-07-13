@@ -23,11 +23,14 @@ Then, without warning, Margaret burst out of the wagon, panic etched across her 
 A flicker. Too fast to follow. The air seemed to ripple.
 A thin red line appeared across her throat. For a suspended heartbeat, she remained standing.
 Then the blood came. Warm and sudden, steaming in the cool night air as she collapsed soundlessly into the mud, eyes wide with shock, hands clutching a wound that hadn’t been there a heartbeat ago.
-Then they saw it just beyond the firelight’s reach, half-veiled in mist — a small, feline-shaped predator, its sleek body cloaked in black fur streaked with shadowy brown. Twin yellow eyes glowed in the darkness, unblinking, piercing straight through them. Its presence pressed against the air like a drawn blade.
+Then they saw it just beyond the firelight’s reach, half-veiled in mist — a small, feline-shaped predator, its sleek body cloaked in black fur streaked with shadowy brown. Twin yellow eyes glowed in the darkness, unblinking, fixed upon them. Its presence pressed against the air like a drawn blade.
 It did not growl.
 It did not move.
 It simply watched.
 Time froze. The campfire crackled and no one dared move.
+Several guards froze where they stood.
+Someone whispered,
+"Blinkclaw..."
 Then Torren’s roar shattered the stillness. “Protect the Lord!”
 Guards and mercenaries scrambled, forming a defensive circle around Lord and Lady Rosendale.
 “Sir, it’s that thing, it followed us!” Michael shouted, terror in his voice.
@@ -39,16 +42,15 @@ Torren’s mind raced. The ground trembled beneath their charge. He knew instant
 “But the children!” Lady Evangeline cried.
 “Edmund will keep them safe, ma’am! We have to move!” Torren urged. He turned to the Tremorhoof and gave a silent command, sending the towering beast to intercept the ascendant wildborn. 
 The Tremorhoof thundered forward, each step cracking through mud and stone. The Blinkclaw vanished—
-
 —and reappeared at its flank in the same breath, claws screeching sparks across thick hide. The colossal beast roared, the sound echoing through the trees like a collapsing cliff.
 “Let’s go!” Lord Henry agreed, gripping his wife’s arm.
 “Everyone, into the forest!” Torren bellowed. Panic scattered across the camp as people broke formation, fleeing into the trees.
-“Why not the carriage?” Lord Henry asks as they moved.
+"Why not the carriage?" Lord Henry asked as they moved.
 “There’s no time, sir! The horses aren’t hitched, and the wagons can’t make it into the forest!” Torren replied, never slowing.
 “But what about Thomas and the others?” one mercenary cried.
 “We have meeting points along the route. They’ll catch up!” Torren barked back.
 Out of the corner of his eye, he saw the Blinkclaw—its movements a blur of impossible speed—darting around the Tremorhoof. Its claws raked sparks across stone-colored hide as the colossal beast fought back with earth-shaking kicks.
-Buy us time, then follow… Torren thought grimly. Partner.
+"Buy us time... then follow, old friend," Torren thought. 
 The fleeing figures plunged into the woods. Wet leaves slapped against armor and faces. Roots twisted beneath the mud, threatening to send them sprawling. The forest, soaked and dark, felt like a maze closing in on itself.
 Behind them, snarls echoed from every direction.
 
@@ -61,8 +63,8 @@ Branches whipped their faces as they tore through the undergrowth until—
 “Gian! Kel! Over here!” Edmund’s voice cut through the din. Clara clung to Cedric, her face pale with fear. 
 “Sir, what do we do?” Gian asked, glancing at the snarling pack tearing into the camp behind them. 
 “We move now. The Tremorhoof has the Blinkclaw tied down for the moment, but it might switch targets once it realizes it can’t win easily.” Edmund urged them forward.
-“My lady, don’t worry. Gian and the great Kel will protect you,” Kel said confidently as they began running. 
-“Damn, I’m still not used to my Echo of Hearing,” Edmund muttered, straining his senses. “I was focused on the pack behind us—I missed one. There’s a Bloomfang ahead.”
+“My lady, don’t worry. Gian and the Great Kel will protect you,” Kel said confidently as they began running. 
+“Damn, I’m still not used to my Echo of Perception,” Edmund muttered, straining his senses. “I was focused on the pack behind us—I missed one. There’s a Bloomfang ahead.”
 He turned sharply to Gian and Kel. “You two handle it. You don’t even need to kill it, just make sure it can’t follow us.”
 With a swift motion he scooped Cedric into his arms, freeing Clara to run faster. 
 “Leave it to us!” Kel said, rushing forward heroically.
@@ -71,8 +73,8 @@ With a swift motion he scooped Cedric into his arms, freeing Clara to run faster
 Kel tightened his grip on his axe. “I’ll go first and distract it. You take it by surprise, okay?”
 “Sounds like a plan. Just don’t let it hit you,” Gian replied.
 Kel laughed, baring his teeth. “Who do you think you’re talking to? I’m the Great Kel!”
-The Bloomfang ahead emerged from between two slick tree trunks, fur matted with rain, eyes reflecting faint moonlight through the canopy. Then it lunged, claws cutting through the air. Kel planted his feet, raising his axe with both hands—one near the blade, the other at the haft’s end. The beast’s strike slammed into him like a hammer, but he held his ground, muscles straining against the impact.
-That opening was all Gian needed. He burst from cover, blade flashing, and drove it deep into the creature’s gaping jaws. The Bloomfang shuddered, let out a strangled howl, then collapsed in a heavy thud that shook the wet earth.
+The Bloomfang ahead emerged from between two slick tree trunks, fur matted with rain, eyes reflecting faint moonlight through the canopy. Then it lunged, claws cutting through the air. Kel planted his feet, gripping the axe with both hands—one near the head, the other at the end of the haft. The beast’s strike slammed into him like a hammer, but he held his ground, muscles straining against the impact.
+That opening was all Gian needed. He burst from cover, blade flashing, and drove it deep into the creature’s gaping jaws. The Bloomfang shuddered, let out a strangled howl, then crashed onto the rain-soaked earth with a heavy thud. 
 Kel exhaled, grinning at his companion.
 “Nice aim,” he said.
 “Save the compliments for later, we need to move,” Gian urged, already running back toward the others.
@@ -82,23 +84,25 @@ After a while, Edmund’s expression hardened. “This isn’t working.”
 “I can still hear them behind us,” Edmund said grimly. “We can’t run from them forever.” His eyes flicked to Lady Clara—she was pale, struggling to keep pace.
 “Are there Bloomfangs ahead, sir?” Gian asked.
 “None that I can hear. Why?”
-“Kel and I can stay behind. Delay the ones chasing us while you lead the others to safety,” Gian said without hesitation.
+“Kel and I will stay behind. Delay them while you lead the others to safety.” Gian said without hesitation.
 Edmund gave a short chuckle despite their situation. “I see you’re improving. Starting to think about the bigger picture, instead of just the enemy right in front of you. Unlike last time.”
 Kel frowned. “What last time?” 
 “The time you saved me because I was too focused on what was right in front of me,” Gian admitted quickly, eyes forward.
 “You’ve got a point,” Edmund said. “But I think I should be one of the ones to stay behind.”
 “That’s dangerous for anyone who does,” Clara said, her voice tight with worry.
 “I’ll be fine, my lady,” Kel said with a grin. 
-“You should stay with them, sir,” Gian countered firmly. “We don’t have your Echo of Hearing. You need to scout ahead for dangers we can’t sense.”
+“You should stay with them, sir,” Gian countered firmly. “We don’t have your echo. You need to scout ahead for dangers we can’t sense.”
 “Yeah, what if there are Bloomfangs waiting in that direction?” Kel added.
-Edmund slowed his stride, eyes flicking between them. Finally, he gave a sharp nod. “Alright. But listen—don’t get reckless. If it turns bad, run. The closest footsteps I can hear are eight. Kill a few, then run.” 
-Lady Clara turned, her voice unshaking despite the fear in her eyes. “You two have to catch up to us. No matter what.”
+Edmund slowed his stride, eyes flicking between them. Finally, he gave a sharp nod. “Alright. But listen—don’t get reckless. If it turns bad, run. This isn't like protecting the caravan. This time you'll be fighting the entire pack at once—not one at a time.” 
+"Yes, sir," Gian answered. 
+“The closest footsteps I can hear are eight. Kill a few, then run.” Edmund said
+Lady Clara turned, her voice steady despite the fear in her eyes. “You two have to catch up to us. No matter what.”
 “Yes, my lady,” they answered together. Then they stopped, steel rasping free, planting themselves between their companions and the pursuing pack.
 When Gian and Kel finally stopped, the sounds became clearer.
 Paws pounding through wet earth.
 Branches snapping.
 Breathing. Closer now.
 Mist drifted between the trees like ghostly curtains as they drew their weapons, steel catching faint slivers of light through the canopy.
-Somewhere ahead, Edmund and the siblings disappeared into shadow.
+Ahead, Edmund and the siblings disappeared into the darkness. 
 Behind them—
 The hunt closed in.
