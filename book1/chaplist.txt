@@ -21,7 +21,7 @@ ch020.txt|Chapter 20: Fire in the Eyes
 ch021.txt|Chapter 21: Bond of Respect
 ch022.txt|Chapter 22: Before the dark
 ch023.txt|Chapter 23: Held Back by Blood
-ch024.txt|Chapter 24: The Full Moon
+ch024.txt|Chapter 24: Moonlit Ambush
 ch025.txt|Chapter 25: A Moment Seized
 ch026.txt|Chapter 26: More than a Job
 ch027.txt|Chapter 27: Bonds and Buckler
