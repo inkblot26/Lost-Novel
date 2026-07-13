@@ -18,14 +18,14 @@ The flame swallowed the Blinkclaw whole, incinerating it in midair. The shockwav
 Gian threw himself to the ground, shielding his face from the searing gust. When the blaze finally died down, he looked up through the smoke.
 The Blinkclaw lay writhing, burning—then stilled. Dead.
 Flames devoured the nearby trees, scorching the forest in a wide radius. Smoke rolled low across the clearing, thick and bitter, stinging eyes and throats. The forest that had once loomed in shadow now burned in violent orange, night held back only by fire. But amid the chaos, Gian realized something.
-The center of the blast… it wasn’t aimed at me. He deliberately used the left side of the scroll’s flame to avoid hitting me. He controlled it that precisely. His’s gaze shifted to Lord Henry, a new level of respect forming in his eyes.
+The center of the blast… it wasn't aimed at me. Lord Henry had deliberately angled the left edge of the flames around him. He controlled the scroll with that much precision. His gaze shifted to Lord Henry, a new level of respect forming in his eyes. 
 “You okay?” Kel asked through clenched teeth, one hand pressed hard against his bleeding side.
 Gian rose, dusting off ash. “I should be asking you that.”
 His eyes fell to his swords. The old blade trembled faintly in his grip, a thin crack splitting along its steel. With a quiet sigh, he dismissed it back into his Void Ring.
 Lord Henry stepped toward the charred clearing, his staff in hand, eyes fixed on the Blinkclaw’s smoldering corpse. He lingered there in silence, ensuring it did not rise again. 
 “Good thing you finished it off, my lord,” Michael said, lowering his bow as he joined him. “For a second, I thought it might escape again with how fast it was, but I think Gian’s strike slowed it down enough.”
 At that, Gian flicked a glance toward Kel but held his tongue.
-Michael’s gaze shifted back. “I didn’t know you had a relic, Gian… and a storage one, no less.”
+Michael’s gaze shifted back. “Didn't know you had a relic, Gian. A storage relic, no less.” 
 Lord Henry turned away from the ashes, his voice steady. “We don’t have time to rest. Michael, you’re with me—we need to find Torren and check on their fight.”
 He looked back toward the two young men. “Can you hold things here, Gian?”
 “Yes, sir,” Gian replied, summoning a longbow of deep green light into his hand.
@@ -41,7 +41,7 @@ Kel forced a smile, trying to lighten her burden. “He’s right, my lady. Ever
 “Unfortunately, no. Just water jugs. Supplies are in the pack over there,” Gian said, pointing toward the bag resting nearby. 
 Baldwin’s jaw tightened. His eyes hardened with resolve. “It’s no good. Best thing is to cut it clean—and burn it shut.”
 Lady Evangeline paled, stepping forward. “Are you certain?” 
-“I agree,” Edmund said grimly. “It might be the only way to stop the bleeding.” 
+“I agree,” Edmund said grimly. “It might be the only way to stop the bleeding and infection.” 
 “Do it, Gian,” Baldwin said, meeting his eyes without wavering.
 “You can use my axe,” Kel said quietly, setting the Crimson Blood Axe at Gian’s feet. 
 Gian picked it up, heavy with the weight of what he was about to do. “Alright.” He turned toward the fire, pressing the blade into the flames until it glowed red-hot. Sparks hissed in the air.
@@ -50,7 +50,7 @@ Edmund tilted his head, listening. “I can’t say for sure… but the trees ke
 When Gian returned with the glowing axe, Baldwin braced himself, his breathing steady despite the sweat pouring down his face.
 “Go,” he said, voice rough.
 With one swift motion, Gian swung. The axe cut clean through. Baldwin’s muffled scream tore from his throat as Gian immediately pressed the searing blade to the wound. Flesh sizzled. The smell of burning filled the camp. Baldwin’s entire body shook violently before, at last, he went limp, unconscious.
-The bleeding had stopped. In silence, Gian and Clara wrapped the stump in clean cloth, working quickly, their hands steady despite the heaviness in the air.
+The bleeding had stopped. In silence, Gian worked with Clara to wrap the stump in clean cloth, the young noblewoman forcing her trembling hands to stay steady. 
 
 It was several long minutes before Lord Henry and the others emerged from the treeline. Thomas staggered beside Torren, his left hand wrapped hastily in cloth—his pinky gone. 
 “How is it?” Edmund asked, rushing to meet them.
@@ -60,7 +60,7 @@ It was several long minutes before Lord Henry and the others emerged from the tr
 Edmund gave a detailed report of what had happened in their absence. 
 So it still managed to get away… Gian thought, eyes drifting toward the forest.
 “What are we going to do now, sir?” Edmund asked after finishing his report.
-“I doubt the Ascendant will come after us again,” Torren replied, glancing at the few trees still smoldering nearby. “Even if it does, it’s injured and alone. It can’t do much. . We’ll put some distance between us and the fire, then rest.”
+“I doubt the Ascendant will come after us again,” Torren replied, glancing at the few trees still smoldering nearby. “Even if it does, it’s injured and alone. It can’t do much. We’ll put some distance between us and the fire, then rest.”
 “You’re right. The smoke could draw more Wildborn,” Thomas muttered in agreement as the smoke column rose thick into the night sky.
 “Edmund, scout ahead. Michael, cover the rear,” Torren ordered. 
 “Yes, sir,” both men answered, immediately moving to their posts, Edmund slipping into the shadows up front, Michael nocking an arrow at the back. 
@@ -69,4 +69,4 @@ So it still managed to get away… Gian thought, eyes drifting toward the forest
 Torren bent, hefting Baldwin onto his back as though the weight meant nothing.
 “We’re ready, sir,” he said.
 Lord Henry gave one last glance at the charred battlefield behind them, then nodded. “Move out.”
-And so, the eleven of them set forward once more, leaving behind the scorched ruins of the fight as they pressed on along the dirt path toward Tillara City.
+Together, the eleven survivors pressed forward once more, leaving behind the scorched battlefield as they continued along the dirt road toward Tillara City. 
