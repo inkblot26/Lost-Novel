@@ -1,21 +1,21 @@
 Chapter 34: Old Bonds, New Ties
-Smoke began to pour from one of the soldiers, thick and fast, swallowing the moonlit road and turning the open fields into a choking gray haze. Sergeant Claren summoned a swirling mass of water in front of him, while five other soldiers rushed toward the carriage with their melee weapons raised. At the same time, two more on each side fired arrows from their bows.
+Mist began to pour from one of the soldiers, thick and fast, swallowing the moonlit road and turning the open fields into a choking blue haze. Sergeant Claren summoned a swirling sphere of water before him as five soldiers charged the carriage with melee weapons raised. Two more—one on each flank—loosed arrows. 
 One of the arrows struck a newly assigned guard just as Edmund passed by, prompting him to move closer to the carriage.
-“Defend the carriage!” Thomas shouted, releasing a gust of wind in a wide arc to disperse the smoke that was meant to conceal the approaching attackers.
-“I’m a bad matchup!” the smoke user shouted as he drew his bow.
+“Defend the carriage!” Thomas shouted, releasing a gust of wind in a wide arc to disperse the mist that was meant to conceal the approaching attackers.
+“Wind? Damn it... bad matchup!” the soldier with echo of water that uses it as a mist shouted as he drew his bow.
 Thomas glided toward the incoming soldiers, wind-enhanced speed carrying him forward. He dodged arrows fired from one soldier at the flank, while another continued targeting those near the carriage.
 The guards fought back, but they were heavily outnumbered.
 “Jude, guard the other side of the carriage!” Edmund shouted to the only Echo user among the new recruits—a young fighter wielding a summoned spear.
 “Yes, sir!” Jude responded, deflecting a soldier’s sword before circling around the carriage.
 Thomas dodged a swipe from another soldier’s blade, then countered with a quick strike to the throat, killing his attacker.
 Suddenly, Claren hurled a high-pressure spinning ball of water at one of the guards. It slammed into the man’s chest with a thunderous splash, hurling him backward across the wet dirt road before he landed hard and motionless.
-Nearby, the guards' only archer loosed an arrow toward the enemy bowman. Both archers fired at each other, ducking and weaving between attacks.
-Then, to Edmund’s side, a guard was killed by the combined assault of an enemy axe and sword user.
+Nearby, the guards' only archer loosed an arrow toward the bowman soldier. Both archers fired at each other, ducking and weaving between attacks.
+Then, beside Edmund, a guard fell under the combined assault of an axe-wielding soldier and a swordsman. 
 This is bad. We need to do something, he thought, considering whether to drive the carriage forward, though doing so would leave Thomas and the others behind.
 As he struggled to fight off the soldiers and decide what to do, an arrow suddenly struck the enemy bowman at the side, killing him.
 “Gian! Kel!” Edmund shouted, spotting Gian, Kel, and another man sprinting toward them.
-Seeing the reinforcements, Claren barked a command to the smoke user. “Intercept them!” he ordered, while preparing to engage Thomas himself.
-“Yes, sir!” the soldier replied, releasing smoke in Gian’s direction while firing arrows. The smoke didn’t block his vision, but he failed to notice the small figure darting in from the side and clawing at his eyes, blinding him. Screaming in pain, he dropped his bow. Oldman arrived a heartbeat later and stabbed him through the chest.
+Seeing the reinforcements, Claren barked a command to the mist user. “Intercept them!” he ordered, while preparing to engage Thomas himself.
+“Yes, sir!” the soldier replied, releasing mist in Gian’s direction while firing arrows. The mist didn’t block his vision, but he failed to notice the small figure darting in from the side and clawing at his eyes, blinding him. Screaming in pain, he dropped his bow. Oldman arrived a heartbeat later and stabbed him through the chest.
 Claren quickly assessed the situation. Gian’s group had arrived, shifting the numbers to eight against six. 
 “Retreat!” he shouted.
 But Edmund didn’t let them go. “Jude! After them!” he called, urging the others to pursue.
@@ -30,7 +30,7 @@ Edmund stepped forward and opened the carriage door.
 “Lady Clara, it’s safe now,” he announced.
 Inside, Clara was on the floor, holding Cedric tightly, shielding him just in case.
 “Lady Clara is here?” Kel said, quickly jumping to his feet from where he had been sitting.
-Clara and Cedric stepped out of the carriage, their eyes falling on the aftermath—the narrow road strewn with fallen soldiers, dark blood soaking into the dirt between wagon ruts.
+Clara and Cedric stepped out of the carriage, their eyes falling on the aftermath—the narrow road strewn with fallen soldiers and guards, dark blood soaking into the dirt between wagon ruts.
 “Gian, Kel—you’re here,” Clara said, her voice filled with relief.
 “They helped us, my lady. We wouldn’t have won without them,” Thomas added as he wiped the blood from his dagger.
 “Once again, you two have saved us. Thank you.” Clara gave them a graceful bow. Cedric, seeing her, followed suit and bowed as well.
@@ -59,7 +59,8 @@ Clara looked down at her hands and quietly said, “Thank you.”
 Clara smiled. “Thank you. Goodbye.”
 “Please tell Lord Henry and Sir Torren what happened here,” Thomas added with a smile.
 “We will,” Gian replied.
-“Goodbye, guys. Let’s meet again someday,” Edmund said as he climbed onto the front of the carriage to scout ahead.
+“Goodbye, guys. Let’s meet again someday,” Edmund said as he climbed onto a horse to scout ahead
+the carriage.
 “Goodbye!” Cedric shouted from the window as the carriage rolled forward.
 Oldman turned to Gian. “Are you ready?”
 “Yes,” Gian replied, turning to face the direction of Tillara.
@@ -80,7 +81,7 @@ Lord Henry looked up in surprise.
 “Gian? Kel? What are you doing here?”
 Kel blinked, turning to Oldman. “Wait... did you just say Lady Rose? As in the Lady Rose of Rosendale?”
 Lady Rose looked to Henry with a calm curiosity. “Do you know them?”
-“Yes,” Lord Henry replied. “They were with me when I traveled from Tala to Tillara. They're my friends.”
+“Yes,” Lord Henry replied. “They were with me when I traveled from Tala to Tillara. They're trusted friends.”
 “I see,” Lady Rose said with a faint smile. “Why don’t the three of you sit down and share your report first?”
 She gestured to the chairs nearby, inviting them to join the meeting.
 After explaining what had happened outside the city, Lord Henry bowed to Gian, Kel, and Oldman.
@@ -88,12 +89,12 @@ After explaining what had happened outside the city, Lord Henry bowed to Gian, K
 “Glad we were there in time,” Kel said with a grin. Gian just gave a quiet nod. 
 “We were lucky you happened to be in the area,” Sir Torren added.
 “Thank you for the report, Oldman. That’s important information,” Lady Rose said, then turned to Henry.
-“I’m afraid you’ll need to go into hiding now, Lord Henry. It’s only a matter of time before the missing soldier patrol is discovered. Once that happens, and the tip you gave to the western gate guards allowing your family to slip out is exposed, everything will be traced back to you.”
+“I’m afraid you’ll need to go into hiding now, Lord Henry. It’s only a matter of time before the missing soldier patrol is discovered. Once that happens, and the tip you gave to the western gate guards allowing your family to slip will be exposed and everything will be traced back to you.”
 “You’re right,” Lord Henry replied. “Torren, send word to Michael and the other newly recruited guards. Tell them to leave the mansion immediately.”
 Torren gave a sharp nod and left the room without another word.
 “I know a place where we can keep you safe, Lord Henry. You don’t need to worry,” Lady Rose said. “But before we proceed with the arrangements…”
 She paused and looked at Gian and Kel.
-“Lord Henry, whatever you’re planning to do we want to be part of it,” Kel said, locking eyes with him.
+“Lord Henry, whatever you’re planning to do, we want to be part of it,” Kel said, locking eyes with him.
 “Very well,” Henry said. “Then once again, I’ll ask for your help.”
 “May I ask what exactly you are after?” Lady Rose asked, her voice calm but her eyes sharp.
 “We need to capture your brother, Ronald,” Gian said, watching her closely for a reaction.
