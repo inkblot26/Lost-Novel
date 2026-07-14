@@ -1,5 +1,5 @@
 Chapter 35: Three Days of Silence
-Inside a small underground room beneath a modest house in the southern district, the walls were plain and slightly damp. A single lantern cast soft light across the floor, enough to see the people gathered around. 
+Inside a small underground room beneath a modest house in the southern district, damp stone walls surrounded a handful of people gathered beneath the soft glow of a single lantern. 
 “Good evening, Lady Rose,” Lord Henry said as Lady Rose entered the room, followed by Dareth and a slender, mature woman.
 “Good evening, Sir Henry. I apologize for the state of the place,” Lady Rose replied.
 “It’s alright. What matters is that we’re safe,” Lord Henry said with a warm smile.
@@ -12,8 +12,8 @@ Inside a small underground room beneath a modest house in the southern district,
 “How high is that?” Michael chimed in, curious.
 Sam and Kel both turned to look at him. “How do you not know this?” Sam asked, raising an eyebrow.
 Michael shrugged. “What? I live a simple life—earn money, eat, sleep,” he said nonchalantly.
-Sam sighed and began explaining. “The military hierarchy in the kingdoms has six ranks. At the top is the General, who commands the entire army—usually a five hundred or more soldiers. Below that is the Commander, who leads a division of about two hundred to five hundred men. Then comes the Captain, who oversees a company or unit of one hundred to two hundred soldiers.”
-“Yeah, then there's the Lieutenant, who commands a platoon of fifty to a hundred men,” Kel added. “Next is the Sergeant, who’s in charge of a squad of ten to fifty soldiers. And finally, regular soldiers at the base.”
+Sam sighed and began explaining. “The military hierarchy in the kingdoms has six ranks. At the top is the General, who commands the entire army—usually five hundred soldiers or more. Below that is the Commander, who leads a division of about two hundred to five hundred men. Then comes the Captain, who oversees a company or unit of one hundred to two hundred soldiers.”
+“Yeah, then there's the Lieutenant, who commands a platoon of fifty men,” Kel added. “Next is the Sergeant, who’s in charge of a squad of ten to twenty soldiers. And finally, regular soldiers at the base.”
 As Kel finished, he glanced at Michael who was already eating, completely ignoring the explanation. Kel just stared at him, annoyed.
 Lord Henry and Lady Rose sat near the center of the room, on plain wooden chairs, quietly waiting.
 
@@ -23,18 +23,18 @@ Moments later, Oldman entered through a side door.
 “Luck is on our side,” Oldman began. “There’s been no change in the deployment of the soldiers. Tomorrow at noon, fifteen hundred soldiers will depart with General Douglas, leaving only three hundred stationed here.”
 “That’s reasonable,” Lady Rose commented. “Even if my brother wanted to keep more troops here, he can’t go against a direct order from the king.”
 “So how are the remaining soldiers positioned in the city?” Lord Henry asked, glancing at the rough map laid out on the table. 
-“With what happened last night, the Highlord decided to replace the wall guards with soldiers. Each gate now has twenty-five soldiers, while the former guards now patrol the walls,” Oldman explained. “There are also one hundred fifty stationed at the military base camp on the northern edge of the district. That leaves only fifty soldiers near Richard’s mansion in the eastern district—the ones we’ll need to deal with directly.”
+“With what happened last night, the Highlord decided to replace the wall guards with soldiers. Each gate now has twenty-five soldiers, while the former guards now patrol the walls,” Oldman explained. “There are also one hundred and fifty stationed at the military base camp on the northern edge of the district. That leaves only fifty soldiers near Richard’s mansion in the eastern district—the ones we’ll need to deal with directly.”
 “Then we can proceed with our original plan,” Lady Rose said, noticing the confused expressions around the room. She gave a signal to Captain Ezra.
 “Allow me to explain,” Ezra said, drawing everyone's attention.
 “Highlord Richard lives in a large, isolated mansion in the eastern district. The nearest camp is where those fifty soldiers are stationed. Our top priority is to prevent them from reinforcing the mansion.” Ezra explained, pointing to the locations on the map. “We’ll send four Echo users from our side to neutralize the camp before the assault begins.”
 “How will they manage that?” Torren asked, cautiously.
-“Leo has the Echo of Fungi. He’ll release spores that dull the soldiers’ senses, making them drowsy and then putting them to sleep,” Ezra replied. “Once they’re unconscious, two Mud Echo users will create a thick wall of mud around the camp, effectively trapping them inside. Even if they wake up, it’ll take them several minutes to break free.”
+“Leo has the Echo of Bloom that allows him to manifest Fungi. It will release spores that can dull the soldiers’ senses, making them drowsy and then putting them to sleep,” Ezra replied. “Once they’re unconscious, two Echo users will create a thick wall of mud around the two opposing entrances to the camp using their Echo of Earth, effectively trapping them inside. Even if they wake up, it’ll take them several minutes to break free.”
 Torren crossed his arms, thinking. “And how do you plan to get that close without alerting the camp?”
-“Sam has the Echo of Silence,” Ezra said, pointing to Sam, who stood beside Kel and Gian. “Using the cover of darkness and his ability, we’ll silently infiltrate the camp and take out any patrolling soldiers quietly before the main move.”
+“Sam has the Echo of Sound that allows him to silence a small area around him,” Ezra said, pointing to Sam, who stood beside Kel and Gian. “Using the cover of darkness and his ability, we’ll silently infiltrate the camp and take out any patrolling soldiers quietly before the main move.”
 “So, with that, the soldiers are sealed in. How long will the sleep effect last?” Torren asked.
-“At least twenty minutes,” Ezra replied. “That gives us just enough time to raise the mud wall. In total, we estimate we’ll have about thirty minutes to hold them off.”
+“At least twenty minutes," Ezra replied. "That gives us enough time to raise the mud walls. In total, we'll have roughly thirty minutes before they escape, and another ten minutes before they can reach the mansion.” 
 “I’ll assign ten additional guards to that group, just to be safe,” Lady Rose added.
-Torren said thoughtfully, “That’s doable. I think it’s a good plan. So, we have at most thirty minutes to deal with the Highlord we’ll just need to move fast.”
+Torren said thoughtfully, “That’s doable. I think it’s a good plan. So, we have at least around forty minutes to deal with the Highlord we’ll just need to move fast.”
 “Exactly,” Lady Rose said. “We only need to handle my brother within those minutes. Once I claim the Ring of Authority from him, and with my Rosendale bloodline, I’ll gain control of the city, at least temporarily, until I can report to the king and secure my succession.”
 Kel raised his hand slightly. “Sorry to interrupt, but… how does that work exactly?”
 “In our kingdom,” Torren explained, “if someone with the ruling bloodline possesses the Ring of Authority, a relic, they are officially recognized as the city’s ruler.”
@@ -51,10 +51,10 @@ Kel raised his hand slightly. “Sorry to interrupt, but… how does that work e
 “So we have the numerical advantage and the element of surprise,” Torren said with a thoughtful nod.
 “Yes, but I need everyone to be aware of three key individuals,” Ezra said seriously. “The first is the head of Richard’s personal guard, Conrad. He’s a former captain and possesses the Echo of Pack and Echo of Strength. He’ll be a major threat in close combat.”
 “Got it,” Torren replied. “We’ll have to deal with him fast.”
-“The second is Dan, head of the mansion’s security. He has two Echoes, Pulse and Axe. That means he can sense movement changes around him. He’ll detect us quickly, which will limit the effectiveness of our surprise attack.” 
+“The second is Dan, head of the mansion’s security. He has two Echoes, Perception and Weapon. That means he can sense movement changes around him. He’ll detect us quickly, which will limit the effectiveness of our surprise attack.” 
 “That’s fine,” Torren said. “We won’t be able to remain undetected for long once the fighting starts anyway. The key is speed.”
 “Who’s the last one?” Gian asked.
-“The last is Jett, a former mercenary. A bit unhinged, but incredibly dangerous. He loves fighting and thrives in chaos. He wields the Echoe of Focus making him extremely deadly in an open brawl.”
+“The last is Jett, a former mercenary. A bit unhinged, but incredibly dangerous. He loves fighting and thrives in chaos. He wields the Echo of Focus making him extremely deadly in an open brawl.”
 “Alright,” Torren said. “When do we launch the attack?”
 Out of nowhere, Lady Rose spoke up. “What is it, Oldman?” she asked, noticing the distant look on his face and how he hadn't said a word after he reported.
 “I’m sorry, Lady Rose,” Oldman replied, his voice low but firm. “But I want to attack Ronald on the same night.”
