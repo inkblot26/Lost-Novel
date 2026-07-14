@@ -1,6 +1,6 @@
 Chapter 29: Treadmill of Tyranny
-Walking out of the west gate, they were met with the grim sight of a massive grain mill. A giant wooden wheel turned under the weight of dozens of prisoners trudging endlessly along it, their bodies sagging with exhaustion. Some staggered, nearly collapsing, only to be prodded forward by the crack of whips in the hands of uniformed overseers. The air carried the sour mix of sweat, dust, and damp wood, heavy with despair. 
-Noticing their horrified stares, Oldman spoke. “That’s a treadmill. Those people are prisoners, sentenced to walk on that wheel all day to power the mill.”
+Walking out of the west gate, they were met with the grim sight of a massive grain mill. A giant wooden wheel turned under the weight of dozens of prisoners trudging endlessly along it, their bodies sagging with exhaustion. Some staggered, nearly collapsing, only to be driven onward by the crack of whips in the hands of uniformed overseers. The air carried the sour mix of sweat, dust, and damp wood, heavy with despair.
+Noticing their horrified stares, Oldman spoke. “That giant wheel is called a treadmill. They're sentenced to walk it from dawn to dusk to power the mill.” 
 “Isn’t that a bit harsh? They’re out in the open heat,” Gian asked, frowning.
 “Well… if they committed serious crimes, maybe they deserve it?” Kel offered, though his tone wavered with doubt. 
 “That’s the thing,” Oldman said grimly. “Most of them were falsely accused. And even when it rains, they’re forced to keep walking. No shelter. Just punishment.”
@@ -31,9 +31,9 @@ His tone darkened, the words carrying more weight than the casual delivery sugge
 Henry remained silent, though the air between them grew taut.
 “I’ve chosen you, Henry,” Richard said at last, eyes locking on him. “Your experience and connections make you the ideal candidate.”
 “Thank you, Highlord,” Henry replied evenly. “But I am merely of a distant branch of House Rosendale. My strength lies in trade, not in managing an industrial operation of this scale.”
-Richard waved the protest away with a careless flick. “Henry, Henry… Yes, you’re from a distant branch, but of those who remain, you are the most capable. Besides” he smiled without warmth “I need someone to provide the initial funding. You're wealthy, and I trust your discretion I’ll handle the political side. Profits will be split: eighty for me, twenty for you.”
+Richard waved the protest away with a careless flick. “Henry, Henry… Yes, you’re from a distant branch, but of those who remain, you are the most capable. Besides” he said with a smile that never reached his eyes, “I need someone to provide the initial funding. You're wealthy, and I trust your discretion. I’ll handle the political side. Profits will be split: eighty for me, twenty for you.”
 Before Henry could answer, Richard added smoothly, “Yes, yes, I know it seems unfair. But the mine’s potential is vast. Even twenty percent will make you wealthier than most nobles in the kingdom. And” he plucked another grape “I will not tax your share. Consider it a gift from your benevolent Highlord.”
-He spoke through mouthfuls of fruit, not even meeting Henry’s eyes.
+He spoke around another mouthful of fruit, barely bothering to meet Henry's eyes. 
 Henry kept his voice calm, measured. “I appreciate the offer, Highlord. I would like to ask for some time to think it through and prepare the necessary arrangements.”
 Richard leaned back. “Fine. Three days, then. But remember—I chose you.”
 He rose, brushing an invisible speck of dust from his sleeve. “And one more matter. To bind our houses closer, I propose an engagement between my brother Ronald and your daughter, Clara to proceed as soon as possible. A union most fitting for one of Rosendale blood.”
@@ -43,7 +43,7 @@ With a flick of his hand, he dismissed Henry as if he were a servant rather than
 
 Inside the gently rocking carriage, the leather seats creaked with every rut in the road. Lord Henry and Torren sat opposite each other, shadows swaying across their faces as muted sunlight filtered through the curtains. 
 “How was it, my lord?” Torren asked at last. His voice was low, but the rare spark of anger in his eyes betrayed his restraint. He was clearly frustrated after waiting since noon, knowing full well that Highlord Richard likely had nothing urgent, other than parties and indulgence. 
-“It’s exactly as we anticipated,” Henry said, gaze fixed on the rolling fields beyond the window. “He wants me to fund the mining operation and oversee everything myself.”
+“It’s exactly as we anticipated,” Henry said, his gaze fixed on the city passing beyond the carriage window. “He wants me to fund the mining operation and oversee everything myself.”
 Torren’s jaw tightened. “So all the effort is yours, while he waits comfortably for profit,” 
 Henry’s lips curved in a humorless smile. “And he demands eighty percent of the income.”
 Torren’s composure cracked. “Eighty? Outrageous! You’ll be risking your fortune, not him!” 
@@ -57,7 +57,7 @@ Henry finally turned from the window, his expression sharpened. “First, Clara 
 “I know. But Clara insists that through their letters, he seemed kind. I want her to see the truth for herself, Torren. She needs to experience the world, not be shielded from it. Besides…” His eyes narrowed. “There’s another reason I came to this city.”
 Torren’s voice dropped. “Are we truly preparing to revolt, my lord?”
 Henry’s tone was firm, final. “I’ll speak with her first. But make the preparations. When the time comes, you’ll move Clara and Cedric out of here.”
-Torren gave a curt nod. “No need to worry. I already set Michael on it. If the worst happens, they’ll travel through Gohara Town and reach the capital, Liora. Lady Clara and young Lord Cedric will be safe there.”
+Torren gave a curt nod. “No need to worry. I already set Michael on it. If the worst happens, they’ll travel through Gohara Town and reach the capital, Liora. Lady Clara and Young Lord Cedric will be safe there.”
 Henry’s hardened expression softened into a quiet smile. “Thank you, my friend.”
 
 Back at the house, the three ate a quiet meal by candlelight. The little room smelled of stew and wood smoke; outside, crickets began their evening chorus. 
@@ -78,5 +78,5 @@ He paused, jaw tightening. “Ronald is spoiled, incompetent, useless. More conc
 Gian watched the old man. “Do you know Ronald personally?”
 Oldman didn’t answer. He simply stared into the dying light outside.
 Gian spoke gently. “I can see it. The hatred in your eyes when you mention his name. It’s stronger than the hate you show for Richard Rosendale.”
-Oldman’s voice dropped to a whisper, heavy with cold fury.
-“He’s someone I must kill.”
+Oldman's voice dropped to a whisper, heavy with a hatred that had clearly festered for years.
+“He's someone I must kill.”
