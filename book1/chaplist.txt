@@ -37,7 +37,7 @@ ch036.txt|Chapter 36: The Threefold Assault
 ch037.txt|Chapter 37: Climb to the Top
 ch038.txt|Chapter 38: The Ones Who Stayed Behind
 ch039.txt|Chapter 39: A clean shot
-ch040.txt|Chapter 40: Three results, One resolve
+ch040.txt|Chapter 40: Three Outcomes, One Resolve
 ch041.txt|Chapter 41: The Voice of Authority
 ch042.txt|Chapter 42: Guided by Purpose
 ch043.txt|Chapter 43: Bonded Wildborn
