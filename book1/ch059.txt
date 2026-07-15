@@ -1,10 +1,10 @@
 Chapter 59: The Cliffside Warning  
-The group had been traveling for three days, and just as night crept in, a sudden downpour crashed over them. Heavy rain soaked through their clothes in seconds.
+The group had been traveling for three days when, just as night fell, a sudden downpour crashed over them. Heavy rain soaked through their clothes within seconds as they took shelter beneath the trees, but the canopy offered little protection against the relentless rain. 
 “Well, I’ll be damned, we’re getting drenched out here!” Kel complained, shaking his messy brown hair as they huddled under the half-assembled cover of their tents. 
-“Damn those crafters, swearing Nightlily is perfect for outdoor travel. Useless when it rains like this,” Oldman grumbled.
+“Damn those crafters, swearing Nightlily is perfect for outdoor travel. It’s useless when it rains like this,” Oldman grumbled.
 Gian said nothing. The rain was falling so thick they could barely see beyond an arm’s length.
 “Now that I think about it,” Kel muttered, “what was the point of transporting all that water from the Baobao Tree back to the village if it’s going to rain this heavily?”
-“Well,” Gian said, trying to find some silver lining, “at least we know they’ve got plenty of clean  and tasty water to drink.”
+“Well,” Gian said, trying to find some silver lining, “at least we know they’ve got plenty of clean and tasty water to drink.”
 “You got a point there,” Kel sighed. “Anyway, how the hell are we supposed to eat? I can’t see anything past my own... scratch that, I can’t even see my hand.” He waved it in front of his face for emphasis.
 Then Gian suddenly remembered something. “Wait… didn’t we get something from the crafters? Uh—hey, Oldman, isn’t this Flicks thing waterproof? The branch that lights up or whatever?”
 “What?” Oldman glanced over, while Tata, soaked to the bone, shook himself off on top of Oldman’s head, sending droplets everywhere. 
@@ -15,7 +15,7 @@ Following the instructions, Gian scraped the tip against a rock. The end flared 
 “Whoa,” Kel said, his eyes lighting up. “Hey, gimme one!”
 Gian handed him another, and soon Kel lit his own Flicks, the glow cutting through the sheets of rain, giving them some much-needed light.
 Studying the faintly glowing branch in his hand, Gian asked, “So… how do we turn it off? It’s consumable, right?” He noticed it was already slightly shorter.
-“Yeah,” Oldman replied. “If you leave it alone for a while it’ll dim out on its own. But every time you use it, it shortens.”
+“Yeah,” Oldman replied. “If you leave it alone for a while, it'll dim on its own. But every time you use it, it shortens.”
 “Anyway, how many days until we reach Lesser Village Altan?” Kel asked, pulling some food from his pack, rations they’d previously stored in Gian’s Void Ring.
 Gian unfolded the map and traced the route with his finger. “From Graylatch, heading north along the Fallen Cliff, it should be about ten days of travel, give or take.”
 “I’ve been there before,” Oldman said, leaning back as he recalled the place. “It’s usually the stopover for anyone wanting to climb the cliff, one of the few areas you can actually hike up without risking your neck. Wonder what it looks like now, huh, Tata?”
@@ -45,7 +45,7 @@ At the sight of the token, the villagers’ tense shoulders eased slightly, thou
 Kel leaned toward Gian and whispered, “Hey, what was that?”
 Gian only shook his head, just as curious.
 The muscular man repeated, “And what do you three want?”
-“We’ve been traveling for days,” Oldman said calmly. “We’re looking for a place to rest. I’ve visited Altan before, back when it welcomed adventurers. After a short break, we plan to hike up the Fallen Cliff.” He pointed toward the low cliff path trail just behind the village.
+“We’ve been traveling for days,” Oldman said calmly. “We’re looking for a place to rest. I’ve visited Altan before, back when it welcomed adventurers. After a short break, we plan to hike up the Fallen Cliff.” He pointed toward the trail leading up the Fallen Cliff just beyond the village. 
 The man hesitated before replying. “I’m sorry, but we can’t let anyone in right now. The village is still on edge. We were attacked by bandits just a few weeks ago. I hope you understand.”
 “That’s too bad…” Oldman scratched his chin. “Out of curiosity, do you know which bandit group it was?”
 The men exchanged wary glances before their leader finally spoke. “Since you’re from the Falcon Order, I’ll tell you this much—don’t hike the Fallen Cliff. There’s… danger up there.”
@@ -67,7 +67,7 @@ The villager nodded. “Yes, that’s fine. I’m sorry. The people are… afrai
 With that, the muscular man turned and led his group back toward the village gate.
 “If they’re a small force now, we can just kill him,” Kel whispered to Oldman and Gian.
 “It’s not that simple,” Oldman refuted, his tone firm. “That man was right, Diego himself is the real problem.” He turned, his gaze serious as it shifted between Gian and Kel. “Remember this—Ascendants are dangerous, but the ones that can speak are far worse.” His fingers brushed the old scar across his forehead. 
-“We agreed to go after Diego for three reasons,” he continued, raising three fingers. “First, to confirm he has no connection to the people we’re really after, even if all signs suggest he doesn’t. Second, to kill him and avenge these people, stopping him before he hurts anyone else. And lastly, if possible, to recover at least some of the stolen fangnotes for the villagers.” He fixed them both with a firm look. “But if any of us senses it’s too dangerous, we turn back. No questions asked.”
+“We agreed to go after Diego for three reasons,” he continued, raising three fingers. “First, to confirm he has no connection to the people we’re really after, even if all signs suggest he doesn’t. Second, to kill him and stop him before he hurts anyone else. And third, if possible, to recover at least some of the stolen fangnotes for the villagers.” He fixed them both with a firm look. “But if any of us senses it’s too dangerous, we turn back. No questions asked.”
 “But—” Kel started to argue, only to be cut off by Gian.
 “Oldman’s right, Kel,” Gian said, his eyes burning with quiet hatred. “If we can’t finish it now, we’ll leave him alive… and come back to kill him later.”
 Seeing them both agree, Oldman nodded. “Good. For now, it’s going to get dark in a couple of hours. Let’s set up camp.”
@@ -82,7 +82,7 @@ Dejected, Kel glanced at Tata, who simply curled up tighter and closed its eyes,
 Oldman reached into his pocket and pulled it out. The silver coin glinted faintly in the fading light. “You mean this?”
 “Yeah,” Kel said, curiosity sparking in his eyes. Gian, sharpening his short sword nearby, glanced up as well, silently listening.
 “This,” Oldman explained, holding the coin between his fingers, “is a Feather Coin. It’s the symbol of the Falcon Order.”
-Seeing Kel’s confused but intrigued expression, he continued, “The Falcon Order is a renowned adventurers’ guild in the Kingdom of Aethelgard. I’m part of it. They take on all kinds of jobs—capturing criminals, gathering intelligence, escorting merchants or nobles, hunting dangerous Wildborns, collecting Primeflora, you name it.”
+Seeing Kel’s confused but intrigued expression, he continued, “The Falcon Order is a renowned adventurers’ guild in the Kingdom of Aethelgard. I’m part of it. They take on all kinds of jobs—capturing criminals, gathering information, escorting merchants or nobles, hunting dangerous Wildborns, collecting Primeflora, you name it.”
 “Wow. Maybe we should join, Gian,” Kel said excitedly.
 Gian didn’t answer right away, which made Oldman lean forward. “I wasn’t keeping it a secret. After this, I was actually planning to suggest you two join.”
 Kel grinned, while Gian raised an eyebrow, skeptical.
