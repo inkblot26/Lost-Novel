@@ -215,57 +215,41 @@
         }
 
         /* =====================================================
-           MOBILE HEADER IMPROVEMENTS
-           Makes the top bar easier to read on phones.
+           MOBILE HEADER TWEAKS
+           Small adjustments for better readability.
         ===================================================== */
         @media (max-width: 768px) {
         
-            /* Bigger header with wrapping */
             .top-bar {
-                padding: 14px 16px;
-                align-items: flex-start;
-                gap: 12px;
+                padding: 12px 14px;
             }
         
-            /* Larger book title */
             .book-title {
-                font-size: 18px;
+                font-size: 15px;
             }
         
-            /* Larger chapter title */
             .chapter-title {
-                font-size: 15px;
-                margin-top: 3px;
+                font-size: 14px;
             }
         
-            /* Keep buttons together */
-            .top-buttons {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px;
-            }
-        
-            /* Bigger buttons */
             .top-buttons button {
-                margin: 0;
-                padding: 10px 14px;
-                font-size: 15px;
+                margin-left: 6px;
+                padding: 7px 10px;
+                font-size: 14px;
             }
         
-            /* Slightly smaller settings panel */
             .reader-settings {
+                top: 58px;
                 right: 10px;
-                top: 72px;
-                width: 220px;
             }
         
-            /* Better chapter dropdown */
             .chapter-panel {
-                width: 240px;
-                left: auto;
+                width: 260px;
                 right: 0;
+                left: auto;
             }
         }
+        
     </style>
 </head>
 
