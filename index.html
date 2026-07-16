@@ -1,117 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lost: Ashes of Vengeance</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost: Ashes of Vengeance</title>
+
     <!-- =====================================================
-         1. GLOBAL STYLES (LAYOUT + THEME)
-         This controls the entire look of the website
-    ===================================================== -->
+         STYLESHEET
+         Controls the appearance of the homepage.
+    ====================================================== -->
     <style>
 
-        /* ================= BASE PAGE STYLE ================= */
+        /* =====================================================
+           BASE PAGE
+        ====================================================== */
         body {
             margin: 0;
             font-family: Georgia, serif;
             font-size: 16px;
-            background-color: #f5f5f5;
-            color: #111;
             line-height: 1.8;
-            transition: 0.3s ease;
+            background: #f5f5f5;
+            color: #111;
             overflow-x: hidden;
+            transition: .3s ease;
         }
 
-        /* ================= BACKGROUND EFFECT ================= */
+        /* Animated background */
         .bg {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at top, #ffffff, #dcdcdc);
+            inset: 0;
             z-index: -1;
+            background: radial-gradient(circle at top, #ffffff, #dcdcdc);
             animation: slowFade 10s infinite alternate;
         }
 
         @keyframes slowFade {
-            0% { filter: brightness(1); }
-            100% { filter: brightness(1.1); }
+            from { filter: brightness(1); }
+            to   { filter: brightness(1.1); }
         }
 
-        /* ================= MAIN CONTAINER ================= */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =====================================================
+           LAYOUT
+        ====================================================== */
         .container {
             max-width: 850px;
             margin: auto;
             padding: 60px 20px;
         }
 
-        /* ================= TITLE SECTION ================= */
+        .section {
+            margin-top: 60px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* =====================================================
+           TITLE
+        ====================================================== */
         .title-block {
             text-align: center;
-            margin-top: 40px;
-            margin-bottom: 10px;
-            animation: fadeIn 1.5s ease-in-out;
+            margin: 40px 0 10px;
+            animation: fadeIn 1.5s ease;
         }
 
         .title-block h1 {
+            margin-bottom: 5px;
             font-size: clamp(34px, 5vw, 64px);
             letter-spacing: 2px;
             line-height: 1.2;
-            margin-bottom: 5px;
             animation: slideUp 1.2s ease;
         }
 
         .author {
-            font-size: 16px;
             margin: 0;
             color: #666;
             font-style: italic;
+            font-size: clamp(16px, 2vw, 20px);
         }
 
-        /* ================= START / CONTINUE BUTTON ================= */
+        /* =====================================================
+           BUTTONS
+        ====================================================== */
         .btn {
-            display:block;
-            width:fit-content;
-            margin:30px auto;
-            padding:16px 32px;
-            font-size:18px;
-            background:#111;
-            color:#fff;
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 16px 32px;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
         }
 
         .btn:hover {
             transform: scale(1.05);
         }
 
-        /* ================= SECTION SPACING ================= */
-        .section {
-            margin-top: 60px;
-            animation: fadeIn 1.5s ease-in-out;
+        .toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 10;
         }
 
-        /* ================= LINKS ================= */
+        /* =====================================================
+           TYPOGRAPHY
+        ====================================================== */
+        h2 {
+            font-size: clamp(24px, 3vw, 34px);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
         a {
             color: #0066cc;
         }
 
-        /* ================= ANIMATIONS ================= */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* =====================================================
+           CHAPTER LIST
+        ====================================================== */
+        #chapterList {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 8px;
+            column-gap: 28px;
+            margin-top: 20px;
+
+            padding: 18px 24px;
+
+            background: #fff;
+            border: 1px solid #d4d4d4;
+            border-radius: 10px;
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        /* Divider between columns */
+
+        #chapterList::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            bottom: 15px;
+            left: 50%;
+            width: 1px;
+            background: #d4d4d4;
         }
 
-        /* ================= DARK MODE ================= */
+        .chapter-item a {
+            display: block;
+            padding: 6px 0;
+            text-decoration: none;
+            color: #111;
+            font-size: clamp(16px, 2vw, 18px);
+        }
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
         body.dark {
-            background-color: #0f0f0f;
+            background: #0f0f0f;
             color: #e6e6e6;
         }
 
@@ -124,7 +196,7 @@
         }
 
         body.dark .btn {
-            background: #ffffff;
+            background: #fff;
             color: #000;
         }
 
@@ -132,164 +204,113 @@
             color: #9ecbff;
         }
 
-        /* ================= DARK MODE BUTTON ================= */
-        .toggle {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            padding: 10px 15px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            z-index: 10;
+        body.dark .chapter-item a {
+            color: #e6e6e6;
         }
 
-        /* ================= CHAPTER GRID ================= */
-        #chapterList {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    row-gap:8px;
-column-gap:28px;
-    margin-top:20px;
-
-    padding:18px 24px;
-    border:1px solid #d4d4d4;
-    border-radius:10px;
-    background:#fff;
-
-    position:relative;
+        body.dark #chapterList {
+            background: #181818;
+            border-color: #333;
         }
 
-        #chapterList::before{
-    content:"";
-    position:absolute;
-
-    top:15px;
-    bottom:15px;
-    left:50%;
-
-    width:1px;
-    background:#d4d4d4;
-}
-
-        body.dark .chapter-item a{
-    color:#e6e6e6;
-}
-
-        body.dark #chapterList{
-    background:#181818;
-    border-color:#333;
-}
-
-body.dark #chapterList::before{
-    background:#333;
-}
-        
-
-        p {
-            font-size:17px;
-            line-height:1.8;
+        body.dark #chapterList::before {
+            background: #333;
         }
 
-        h2{
-            font-size: clamp(24px, 3vw, 34px);
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+        @media (max-width:768px) {
+            .container {
+                padding: 30px 18px;
+            }
+
+            .title-block {
+                margin-top: 20px;
+            }
+
+            #chapterList {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px 16px;
+            }
+
+            .toggle {
+                padding: 8px 12px;
+                font-size: 16px;
+            }
+
+            button {
+                padding: 10px 16px;
+                font-size: 16px;
+            }
         }
 
-        .author{
-            font-size: clamp(16px, 2vw, 20px);
-        }
-
-        .chapter-item a{
-            display:block;
-            padding:6px 0;
-            text-decoration:none;
-            color:#111;
-            font-size:clamp(16px,2vw,18px);
-        }
-        
-        @media (max-width: 768px){
-
-    .container{
-        padding:30px 18px;
-    }
-
-    .title-block{
-        margin-top:20px;
-    }
-
-    /* One column chapter list */
-    #chapterList{
-        grid-template-columns:1fr 1fr;
-        gap:8px 16px;
-    }
-
-    .toggle{
-        padding:8px 12px;
-        font-size:16px;
-    }
-
-    button{
-        font-size:16px;
-        padding:10px 16px;
-    }
-}
-        
     </style>
-    
 </head>
 
 <body>
 
-<!-- =====================================================
-     2. BACKGROUND + UI BUTTONS
-===================================================== -->
+    <!-- =====================================================
+             BACKGROUND
+    ====================================================== -->
+    <div class="bg"></div>
+    <!-- Dark Mode Toggle -->
+    <button class="toggle" onclick="toggleMode()">🌙 / ☀</button>
+    <div class="container">
 
-<div class="bg"></div>
-
-<button class="toggle" onclick="toggleMode()">🌙 / ☀</button>
-
-<div class="container">
-
-    <!-- ================= TITLE ================= -->
+    <!-- =================================================
+            TITLE
+    ================================================== -->
     <div class="title-block">
         <h1>Lost: Ashes of Vengeance</h1>
-        <p class="author">by Inkblot</p>
+         <p class="author">by Inkblot</p>
     </div>
 
-    <!-- ================= CONTINUE / START BUTTON ================= -->
-    <a class="btn" href="#" id="mainButton" onclick="openChapter(event)">
+    <!-- Continue / Start Button -->
+    <a class="btn"
+        id="mainButton"
+        href="#"
+        onclick="openChapter(event)">
         Loading...
-    </a>
+     </a>
 
-    <!-- ================= PROLOGUE ================= -->
+    <!-- =================================================
+             PROLOGUE
+    ================================================== -->
     <div class="section">
         <h2>Prologue</h2>
         <p>
-            In the age of the Galactic Awakening, humanity reached beyond the stars. Hopeful and curious, they
-        encountered the Chaturi, a solitary traveler of boundless intellect and mystery, unlike anything ever known
-        in a vessel called Oumuamua. Its arrival on Earth brought awe and unity. For a time, there was peace.
-        Knowledge flowed freely, and wonder bloomed. 
+            In the age of the Galactic Awakening, humanity reached beyond the stars.
+            Hopeful and curious, they encountered the Chaturi, a solitary traveler of
+            boundless intellect and mystery, unlike anything ever known, in a vessel
+            called Oumuamua. Its arrival on Earth brought awe and unity. For a time,
+            there was peace. Knowledge flowed freely, and wonder bloomed.
         </p>
         <p>
-            But peace is fragile. As fear and ambition took root, nations turned on one another, each seeking to control
-        the Chaturi. Diplomacy gave way to deception. War followed. Disillusioned by humanity’s hunger for
-        power, the Chaturi vanished without a trace or a word. Some say it left in disappointment. Others believe it
-        glimpsed something beyond human understanding.
+            But peace is fragile. As fear and ambition took root, nations turned on
+            one another, each seeking to control the Chaturi. Diplomacy gave way to
+            deception. War followed. Disillusioned by humanity's hunger for power,
+            the Chaturi vanished without a trace or a word. Some say it left in
+            disappointment. Others believe it glimpsed something beyond human
+            understanding.
         </p>
         <p>
-            Then the world convulsed. Monstrous beasts roamed the land. Storms poisoned the skies. Oceans
-        swallowed continents. Forests reclaimed cities. Technology, from satellites to weapons to digital memory,
-        ceased to function, wiped away by forces unknown. Civilization crumbled. Billions perished.
-        And yet, in the ruins, survivors awakened to something new, or perhaps something ancient — Verdant
-        Echoes, a power drawn not from machines, but from life itself.
+            Then the world convulsed. Monstrous beasts roamed the land. Storms
+            poisoned the skies. Oceans swallowed continents. Forests reclaimed
+            cities. Technology—from satellites to weapons to digital memory—ceased
+            to function, wiped away by forces unknown. Civilization crumbled.
+            Billions perished. And yet, in the ruins, survivors awakened to
+            something new, or perhaps something ancient—Verdant Echoes, a power
+            drawn not from machines, but from life itself.
         </p>
         <p>
-        Centuries have passed. Now begins the Verdant Age.
+            Centuries have passed. Now begins the Verdant Age.
         </p>
     </div>
 
-    <!-- ================= CHAPTER LIST ================= -->
+    <!-- =================================================
+             CHAPTER LIST
+    ================================================== -->
     <div class="section">
         <h2>Chapter List</h2>
 
@@ -302,132 +323,180 @@ body.dark #chapterList::before{
         </div>
     </div>
 
-    <!-- ================= LORE LINKS ================= -->
+    <!-- =================================================
+             LORE ARCHIVE
+    ================================================== -->
     <div class="section">
         <h2>Lore Archive</h2>
+        
         <ul>
-            <li><a href="/Lost-Novel/lore/primeflora.html">List of Primeflora</a></li>          
-            <li><a href="/Lost-Novel/lore/wildborn.html">List of Wildborn</a></li>
-            <li><a href="/Lost-Novel/lore/echosystem.html">Verdant Echo</a></li>
-            <li><a href="/Lost-Novel/lore/worldmap.html">World Map</a></li>
+            <li>
+                <a href="/Lost-Novel/lore/primeflora.html">
+                    List of Primeflora
+                 </a>
+            </li>
+            <li>
+                <a href="/Lost-Novel/lore/wildborn.html">
+                    List of Wildborn
+                </a>
+            </li>
+            <li>
+                <a href="/Lost-Novel/lore/echosystem.html">
+                    Verdant Echo
+                </a>
+            </li>
+            <li>
+                <a href="/Lost-Novel/lore/worldmap.html">
+                    World Map
+                 </a>
+            </li>
         </ul>
     </div>
+        
+    </div>
 
-</div>
+    <!-- =====================================================
+         DARK MODE SYSTEM
+    ====================================================== -->
+    <script>
 
-<!-- =====================================================
-     3. DARK MODE SYSTEM
-===================================================== -->
-<script>
+    /* =====================================================
+       DARK MODE SYSTEM
+       Saves the user's preferred theme in localStorage.
+    ====================================================== */
 
-    // Load saved theme
+    // Apply saved theme on page load
     if (localStorage.getItem("mode") === "dark") {
         document.body.classList.add("dark");
     }
 
-    // Toggle light/dark mode
+    // Toggle between light and dark mode
     function toggleMode() {
         document.body.classList.toggle("dark");
 
         localStorage.setItem(
             "mode",
-            document.body.classList.contains("dark") ? "dark" : "light"
+            document.body.classList.contains("dark")
+                ? "dark"
+                : "light"
         );
     }
 
 </script>
 
-<!-- =====================================================
-     4. CONTINUE READING SYSTEM
-===================================================== -->
 <script>
-
+    /* =====================================================
+       CONTINUE READING SYSTEM
+       Remembers the last chapter the reader opened.
+    ====================================================== */
     const firstChapter = "/Lost-Novel/book1/ch001.html";
 
-    // Updates button text depending on saved progress
+    // Update the main button text
     function updateButton() {
         const btn = document.getElementById("mainButton");
-        const hasHistory = localStorage.getItem("lastChapter");
-    
-        if (hasHistory) {
-            btn.innerText = "Continue Reading";
-        } else {
-            btn.innerText = "Start Reading";
-        }
+        const lastChapter = localStorage.getItem("lastChapter");
+        btn.textContent = lastChapter
+            ? "Continue Reading"
+            : "Start Reading";
     }
 
-    // Opens last chapter or first chapter
+    // Open the saved chapter or begin from Chapter 1
     function openChapter(event) {
         event.preventDefault();
-
-        let lastChapter = localStorage.getItem("lastChapter");
-
-        window.location.href = lastChapter ? lastChapter : firstChapter;
+        const lastChapter = localStorage.getItem("lastChapter");
+        window.location.href = lastChapter || firstChapter;
     }
 
+    // Initialize button text
     updateButton();
 
 </script>
 
 <!-- =====================================================
-     5. LOAD CHAPTER LIST (FROM TXT FILE)
+     CHAPTER LIST SYSTEM
 ===================================================== -->
 <script>
-
+<script>
+    /* =====================================================
+       CHAPTER LIST SYSTEM
+       Loads the chapter list from chaplist.txt and
+       displays 20 chapters per page.
+    ====================================================== */
     let chapters = [];
     let currentPage = 0;
+    const ITEMS_PER_PAGE = 20;
+    const COLUMNS = 10;
 
+    // Load chapter list
     fetch("/Lost-Novel/book1/chaplist.txt")
-        .then(res => res.text())
+        .then(response => response.text())
         .then(text => {
 
-            // Convert text file → array of chapters
-            chapters = text.trim().split("\n").map(line => {
-                const [file, title] = line.split("|");
-                return {
-                    file: file.trim(),
-                    title: title.trim()
-                };
-            });
+            chapters = text
+                .trim()
+                .split("\n")
+                .map(line => {
+
+                    const [file, title] = line.split("|");
+
+                    return {
+                        file: file.trim(),
+                        title: title.trim()
+                    };
+                });
 
             renderPage();
         });
 
-    // Render chapters in grid format
+    /* =====================================================
+       Render Current Page
+    ====================================================== */
+
     function renderPage() {
-
         const list = document.getElementById("chapterList");
-
-        const itemsPerPage = 20;
-        const start = currentPage * itemsPerPage;
-        const pageItems = chapters.slice(start, start + itemsPerPage);
-
-        const left = pageItems.slice(0, 10);
-        const right = pageItems.slice(10, 20);
-
+        const start = currentPage * ITEMS_PER_PAGE;
+        const pageItems = chapters.slice(start, start + ITEMS_PER_PAGE);
+        const leftColumn = pageItems.slice(0, COLUMNS);
+        const rightColumn = pageItems.slice(COLUMNS, ITEMS_PER_PAGE);
         let html = "";
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < COLUMNS; i++) {
 
             html += `
                 <div class="chapter-item">
-                    ${left[i] ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${left[i].file}">${left[i].title}</a>` : ""}
+                    ${
+                        leftColumn[i]
+                            ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${leftColumn[i].file}">
+                                   ${leftColumn[i].title}
+                               </a>`
+                            : ""
+                    }
                 </div>
 
                 <div class="chapter-item">
-                    ${right[i] ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${right[i].file}">${right[i].title}</a>` : ""}
+                    ${
+                        rightColumn[i]
+                            ? `<a href="/Lost-Novel/chapter.html?file=/Lost-Novel/book1/${rightColumn[i].file}">
+                                   ${rightColumn[i].title}
+                               </a>`
+                            : ""
+                    }
                 </div>
             `;
         }
 
         list.innerHTML = html;
 
-        document.getElementById("pageInfo").innerText =
-            `Page ${currentPage + 1} / ${Math.ceil(chapters.length / itemsPerPage)}`;
+        document.getElementById("pageInfo").textContent =
+            `Page ${currentPage + 1} / ${Math.ceil(chapters.length / ITEMS_PER_PAGE)}`;
     }
 
+    /* =====================================================
+       Navigation
+    ====================================================== */
     function nextPage() {
-        if (currentPage < Math.ceil(chapters.length / 20) - 1) {
+        const totalPages = Math.ceil(chapters.length / ITEMS_PER_PAGE);
+        if (currentPage < totalPages - 1) {
             currentPage++;
             renderPage();
         }
@@ -443,4 +512,4 @@ body.dark #chapterList::before{
 </script>
 
 </body>
-</html>
+</html>    
