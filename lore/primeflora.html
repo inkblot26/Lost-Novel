@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Primeflora</title>
+
+    <style>
+        /* =====================================================
+           1. BASE STYLE
+        ===================================================== */
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background-color: #f5f5f5;
+            color: #111;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* =====================================================
+           2. DARK MODE
+        ===================================================== */
+        body.dark {
+            background-color: #0f0f0f;
+            color: #e6e6e6;
+        }
+
+        body.dark img {
+            border-color: #333;
+        }
+
+        body.dark .description {
+            color: #bbb;
+        }
+
+        /* =====================================================
+           3. TOP BAR (MATCH CHAPTER.HTML STYLE)
+        ===================================================== */
+        .top-bar {
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 50;
+        }
+
+        body.dark .top-bar {
+            background: #121212;
+            border-bottom: 1px solid #333;
+        }
+
+        .book-info {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .book-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .chapter-title {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        .top-buttons button {
+            margin-left: 10px;
+            padding: 6px 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 40px 0 20px;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 40px auto 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            white-space: pre-line;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        body.dark .btn {
+            background: #fff;
+            color: #000;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .chapter-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .chapter-panel {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 240px;
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(255,255,255,0.98);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            display: none;
+            text-align: left;
+            z-index: 200;
+        }
+
+        body.dark .chapter-panel {
+            background: rgba(30,30,30,0.98);
+            border: 1px solid #333;
+        }
+
+        .chapter-panel a {
+            display: block;
+            padding: 6px 8px;
+            text-decoration: none;
+            color: #111;
+            border-radius: 5px;
+        }
+
+        body.dark .chapter-panel a {
+            color: #e6e6e6;
+        }
+
+        .chapter-panel a:hover {
+            background: rgba(0,0,0,0.05);
+        }
+
+        body.dark .chapter-panel a:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* =====================================================
+           LORE CARD
+        ===================================================== */
+        
+        .lore-card{
+            max-width:900px;
+            margin:45px auto;
+            padding:35px 40px;
+        
+            background:#ffffff;
+        
+            border:1px solid #d8d8d8;
+            border-radius:12px;
+        
+            text-align:left;
+        
+            box-shadow:0 5px 15px rgba(0,0,0,.08);
+        }
+        
+        body.dark .lore-card{
+            background:#181818;
+            border:1px solid #333;
+        }
+        
+        .lore-card h2{
+            margin-top:0;
+            margin-bottom:25px;
+        
+            font-size:34px;
+        
+            border-bottom:2px solid #d9d9d9;
+            padding-bottom:12px;
+        }
+        
+        body.dark .lore-card h2{
+            border-color:#444;
+        }
+        
+        .lore-card p{
+            margin:18px 0;
+            font-size:18px;
+            line-height:1.9;
+        }
+        
+        .lore-card strong{
+            color:#8a5a00;
+        }
+        
+        body.dark .lore-card strong{
+            color:#ffd76a;
+        }
+        
+        .intro{
+            font-size:22px !important;
+            text-align:center;
+            margin-bottom:30px !important;
+        }
+        
+        .lore-card blockquote{
+            margin:40px 0 10px;
+            padding:20px;
+        
+            border-left:5px solid #8a5a00;
+        
+            background:rgba(0,0,0,.03);
+        
+            font-style:italic;
+            font-size:20px;
+            text-align:center;
+        }
+        
+        body.dark .lore-card blockquote{
+            background:rgba(255,255,255,.04);
+            border-left-color:#ffd76a;
+        }
+
+        //
+        .lore-card h3{
+            margin-top:35px;
+            margin-bottom:15px;
+            font-size:26px;
+            color:#444;
+        }
+        
+        body.dark .lore-card h3{
+            color:#f0f0f0;
+        }
+        
+        .lore-divider{
+            margin:35px 0;
+            border:none;
+            border-top:1px solid #d8d8d8;
+        }
+        
+        body.dark .lore-divider{
+            border-color:#3d3d3d;
+        }
+
+        //
+        .lore-card h4{
+            margin-top:25px;
+            margin-bottom:15px;
+            color:#8a5a00;
+        }
+        
+        body.dark .lore-card h4{
+            color:#ffd76a;
+        }
+        
+        .city-list{
+            margin:0;
+            padding-left:22px;
+        }
+        
+        .city-list li{
+            margin-bottom:18px;
+            line-height:1.8;
+        }
+        
+        .city-list em{
+            color:#666;
+        }
+        
+        body.dark .city-list em{
+            color:#bdbdbd;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <div class="book-info">
+        <a class="book-title" href="/Lost-Novel/">
+            Lost: Ashes of Vengeance
+        </a>
+    </div>
+
+    <div class="top-buttons">
+
+        <div class="chapter-wrapper">
+            <button onclick="toggleLoreList()">📚 Lore</button>
+            <div id="lorePanel" class="chapter-panel"></div>
+        </div>
+
+        <button onclick="toggleMode()">🌙 / ☀</button>
+    </div>
+</div>
+
+<button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
+
+<h1>Primeflora</h1>
+
+<div class="lore-card">
+
+    <h2>The Primeflora</h2>
+
+    <p>
+        Primeflora are extraordinary plants that have adapted to the harsh 
+        and ever-changing wilderness, evolving far beyond ordinary vegetation. 
+        Through generations of survival, they have developed remarkable traits—some 
+        store vast reserves of water within swollen trunks, others produce fruits 
+        with rare medicinal or alchemical properties, while a few react to movement 
+        or changes in their surroundings like silent guardians of the wild. Their wood, 
+        roots, bark, leaves, flowers, sap, and fruits are highly prized for the creation 
+        of echotech, medicines, and other valuable materials, making Primeflora among 
+        nature's most sought-after resources.
+    </p>
+
+</div>
+
+<div class="lore-card">
+    <h2>List of Known Primeflora</h2>
+    <hr class="lore-divider">
+    <h3><strong>Baobao Tree</strong></h3>
+    <p>
+        The Baobao Tree is a colossal Primeflora with a massively swollen barrel-shaped 
+        trunk that can span the width of a small house. Its smooth, pale gray bark is 
+        stretched tightly over the trunk, broken only by shallow wrinkles that resemble 
+        weathered stone. Near its crown, thick, stubby branches twist outward like giant 
+        roots reaching toward the sky, giving the tree the unmistakable appearance of 
+        having been planted upside down. Sparse clusters of rounded gray-green leaves 
+        grow only at the tips of its branches. Hanging beneath them are large oval Bao 
+        Fruits—hard, slate-gray pods that contain naturally filtered drinking water. 
+        The trunk itself stores enormous water reserves, and when cut, clear water pours 
+        from the wound before the bark slowly seals itself over time.
+    </p>
+    <hr class="lore-divider">
+    <h3><strong>Duskveil Fern</strong></h3>
+    <p>
+        The Duskveil Fern is a low-growing Primeflora with broad, layered fronds colored 
+        deep violet fading into black near their edges. Its leaves possess a soft velvety 
+        texture that seems to swallow surrounding light. After sunset, the fern releases 
+        clouds of microscopic black spores that drift silently through the air, absorbing 
+        nearby sound and creating unnaturally quiet pockets of wilderness. Entire forests 
+        carpeted with Duskveil Ferns become eerily silent after nightfall. Its spores are 
+        harvested to create stealth echotech and sound-dampening cloaks.
+    </p>
+    <hr class="lore-divider">
+    <h3><strong>Nightveil Rose</strong></h3>
+    <p>
+        The Nightveil Rose is a rare Primeflora found only upon the mist-shrouded slopes 
+        of Mount Tharros. Its slender dark stems support elegant blossoms whose velvety 
+        petals are so black they appear to absorb the surrounding light. Silvery droplets 
+        of dew cling to each bloom throughout the night, making them appear as though 
+        scattered with stars. Once picked, the flower never wilts, preserving its perfect 
+        form indefinitely. However, if replanted beyond Mount Tharros, its petals gradually 
+        fade into a deep crimson, as though separated from the mountain that gave them life. 
+        Its blossoms are prized for perfumes, rituals, ceremonial offerings, and shadow-based 
+        echotech.
+    </p>
+    <hr class="lore-divider">
+    <h3><strong>Sacred White Tree</strong></h3>
+    <p>
+        The Sacred White Tree is an immense Primeflora found only atop the isolated cliffs 
+        of the Lipad Clan. Every part of the tree—from its smooth trunk and twisting branches 
+        to its leaves—is a brilliant ivory white that shimmers softly beneath sunlight and 
+        moonlight alike. Its translucent leaves resemble layered feathers, gently reflecting 
+        the light around them. Only on rare occasions does it bear luminous white fruit, and 
+        on even rarer occasions, one of those fruits conceals a Verdant Echo that grants the 
+        Rare Echo of Wing.
+    </p>
+    <hr class="lore-divider">
+    <h3><strong>Walking Rhiza</strong></h3>
+    <p>
+        The Walking Rhiza is a wandering Primeflora whose thick trunk resembles an ancient 
+        palm weathered by centuries of travel. Instead of remaining rooted in place, dozens 
+        of long, rope-like roots descend from its base, spreading like the legs of a colossal 
+        spider. These roots slowly lift, bend, and step across the landscape, allowing the 
+        tree to roam in search of fertile soil or hidden water. Its crown bears broad emerald 
+        leaves that sway even without wind, while its bark is dark brown and deeply grooved 
+        from constant movement. At night, friction between its moving roots and the earth 
+        produces a faint amber glow, causing migrating groves to resemble floating rivers of 
+        fire weaving through the wilderness. The dense yet flexible roots are highly prized 
+        for crafting Flicks echotech.
+    </p>
+    
+</div>    
+
+<a class="btn" href="/Lost-Novel/">
+    ← Back to Home
+</a>
+
+<script>
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    function toggleMode() {
+        document.body.classList.toggle("dark");
+        localStorage.setItem("mode", document.body.classList.contains("dark") ? "dark" : "light");
+    }
+
+    function toggleLoreList() {
+        const panel = document.getElementById("lorePanel");
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+        loadLoreList();
+    }
+
+    function loadLoreList() {
+        const lore = [
+            { name: "List of Primeflora", link: "/Lost-Novel/lore/primeflora.html" },
+            { name: "List of Wildborn", link: "/Lost-Novel/lore/wildborn.html" },
+            { name: "Verdant Echo", link: "/Lost-Novel/lore/echosystem.html" },
+            { name: "World Map", link: "/Lost-Novel/lore/worldmap.html" }
+        ];
+
+        document.getElementById("lorePanel").innerHTML =
+            lore.map(item => `<a href="${item.link}">${item.name}</a>`).join("");
+    }
+</script>
+
+</body>
+</html>
