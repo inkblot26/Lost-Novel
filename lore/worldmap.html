@@ -213,6 +213,82 @@
         body.dark .chapter-panel a:hover {
             background: rgba(255,255,255,0.08);
         }
+
+        /* =====================================================
+           LORE CARD
+        ===================================================== */
+        
+        .lore-card{
+            max-width:900px;
+            margin:45px auto;
+            padding:35px 40px;
+        
+            background:#ffffff;
+        
+            border:1px solid #d8d8d8;
+            border-radius:12px;
+        
+            text-align:left;
+        
+            box-shadow:0 5px 15px rgba(0,0,0,.08);
+        }
+        
+        body.dark .lore-card{
+            background:#181818;
+            border:1px solid #333;
+        }
+        
+        .lore-card h2{
+            margin-top:0;
+            margin-bottom:25px;
+        
+            font-size:34px;
+        
+            border-bottom:2px solid #d9d9d9;
+            padding-bottom:12px;
+        }
+        
+        body.dark .lore-card h2{
+            border-color:#444;
+        }
+        
+        .lore-card p{
+            margin:18px 0;
+            font-size:18px;
+            line-height:1.9;
+        }
+        
+        .lore-card strong{
+            color:#8a5a00;
+        }
+        
+        body.dark .lore-card strong{
+            color:#ffd76a;
+        }
+        
+        .intro{
+            font-size:22px !important;
+            text-align:center;
+            margin-bottom:30px !important;
+        }
+        
+        .lore-card blockquote{
+            margin:40px 0 10px;
+            padding:20px;
+        
+            border-left:5px solid #8a5a00;
+        
+            background:rgba(0,0,0,.03);
+        
+            font-style:italic;
+            font-size:20px;
+            text-align:center;
+        }
+        
+        body.dark .lore-card blockquote{
+            background:rgba(255,255,255,.04);
+            border-left-color:#ffd76a;
+        }
         
     </style>
 </head>
@@ -265,8 +341,52 @@
     <img src="/Lost-Novel/lore/Lost World.jpg" alt="World Map">
 </div>
 
-<div class="description">
-    This map represents the known world after the collapse of civilization.
+<div class="lore-card">
+
+    <h2>🌍 The World</h2>
+
+    <p class="intro">
+        <strong>Humanity occupies only a small fraction of the world.</strong>
+    </p>
+
+    <p>
+        Most civilization lies within the fertile western triangle of the
+        <strong>Great Continent</strong>, where forests, rivers, mountains, and
+        lakes have allowed kingdoms, cities, and villages to flourish for
+        centuries. Beyond this settled frontier stretches an immense wilderness
+        known simply as <strong>the Unknown</strong>—a realm of unexplored lands
+        inhabited by powerful Wildborn and the remnants of forgotten civilizations.
+    </p>
+
+    <p>
+        Across the <strong>Sea of Glass</strong> to the northwest lies the
+        <strong>Sea of Glass Archipelago</strong>, home to the island
+        <strong>Kingdom of Faylora</strong>, while far to the north stretches the
+        <strong>Endless White</strong>, an immeasurable frozen wilderness where
+        the <strong>Kingdom of Norvalen</strong> endures amid eternal snow and ice.
+    </p>
+
+    <p>
+        Separating civilization from the Unknown is the
+        <strong>Verdant Ring</strong>—a continuous chain of fortified cities,
+        military outposts, and defensive walls stretching from the
+        <strong>Frozen Sea</strong> in the north to the southern deserts.
+        For centuries, it has served as humanity's final frontier,
+        protecting the known world from the countless dangers beyond.
+    </p>
+
+    <p>
+        Everything east of the Verdant Ring, along with most of the Endless White,
+        remains unexplored. Expeditions rarely return, and those who do speak of
+        colossal Wildborn, forgotten kingdoms, ancient ruins, and landscapes
+        unlike anything found within civilized lands.
+    </p>
+
+    <blockquote>
+        "To most people, the world ends at the Verdant Ring.
+        Beyond it lies only the Unknown."
+    </blockquote>
+
 </div>
 
 <!-- HOME BUTTON (MATCH CHAPTER STYLE) -->
